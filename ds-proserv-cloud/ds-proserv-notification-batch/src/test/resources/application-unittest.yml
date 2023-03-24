@@ -33,8 +33,8 @@ proserv:
       username: docusignuser
       password: testing1
     gmail: 
-     ***REMOVED*** ***REMOVED***
-     ***REMOVED*** ***REMOVED***
+     clientid: ***REMOVED***
+     clientsecret: ***REMOVED***
      appidentifier: cloudsystemalert@gmail.com
      appname: SystemAlert
      

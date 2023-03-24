@@ -29,7 +29,7 @@ public class AuthenticationControllerTest extends AbstractTests {
 	public void requestJWTUserTokenUserWithoutConsent() throws Exception {
 
 		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
-		authenticationRequest.setUser("4ba1fa0e-e4af-4a3d-8235-7f6c5860cf53");
+		authenticationRequest.setUser("xxx1fa0e-xxxx-xxxx-xxxx-xxxc5860cxxx");
 		authenticationRequest.setScopes("signature impersonation");
 		mockMvc.perform(MockMvcRequestBuilders.post("/docusign/authentication/token")
 				.with(httpBasic("docusignuser", "testing1")).content(asJsonString(authenticationRequest))
@@ -43,7 +43,7 @@ public class AuthenticationControllerTest extends AbstractTests {
 	public void requestJWTUserTokenUserWithConsent() throws Exception {
 
 		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
-		authenticationRequest.setUser("eddc8f7b-da28-4e27-ba0c-7a15fb3ab914");
+		authenticationRequest.setUser("xxxc8f7b-xxxx-xxxx-xxxx-xxx5fb3abxxx");
 		authenticationRequest.setScopes("signature impersonation");
 
 		mockMvc.perform(MockMvcRequestBuilders.post("/docusign/authentication/token")

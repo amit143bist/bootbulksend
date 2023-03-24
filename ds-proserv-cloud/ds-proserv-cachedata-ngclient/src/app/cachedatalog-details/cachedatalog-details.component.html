@@ -1,0 +1,21 @@
+<h2>CacheDataLog Details</h2> 
+
+<hr/>
+<div *ngIf="cacheDataLog">
+  <div>
+    <label><b>Cache Id: </b></label> {{cacheDataLog.cacheId}}
+  </div>
+  <div>
+    <label><b>Cache Key: </b></label> {{cacheDataLog.cacheKey}}
+  </div>
+  <div>
+    <label><b>Cache Value: </b></label> {{cacheDataLog.cacheValue}}
+  </div>
+  <div>
+    <label><b>Cache Reference: </b></label> {{cacheDataLog.cacheReference}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to CacheData List</button><br>

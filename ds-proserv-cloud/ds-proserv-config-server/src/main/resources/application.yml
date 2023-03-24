@@ -1,0 +1,27 @@
+#spring.cloud.config.server.native.searchLocations=file:///D:/app-config
+#spring.cloud.config.server.git.uri=file://${user.home}/application-config
+spring:
+   profiles:
+     active: native
+   application:
+     name: dsconfigserver
+   cloud:
+     config:
+       server:
+         native:
+           search-locations: file://${cloud.config.searchLocations}
+           searchLocations: file://${cloud.config.searchLocations}
+           
+server:
+  port: 8090
+             
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"

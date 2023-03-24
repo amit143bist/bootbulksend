@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    discovery:
+      enabled: false
+  profiles:
+    active: unittest
+proserv:
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+    
+connect:
+  application:
+    username: connectuser
+    password: 4a16b38052f18ec9f396e2fc595621116ec07488e739bb5a81fd2e4aa86d04caaf818f912b01ba5b
+    
+ds:
+  connectprocessnowsync: true
+  connectqueuedasync: false
+  async:
+    queuecapacity: 100
+    maxpoolsize: 999999
+    corepoolsize: 5
+    executornameprefix: DSExecutor-  
+  processor:
+    type: IHDA
+    programtypelabel: programtype
+    langcodelabel: languagecode
+    agentcodelabel: agentcode
+    appdecisionlabel: isapproved   
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"    

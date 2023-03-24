@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ds-proserv-authentication</artifactId>
+	<name>ds-proserv-authentication</name>
+	<description>Oauth Authentication project for proserv</description>
+
+	<parent>
+		<groupId>com.ds.proserv.cloud</groupId>
+		<artifactId>ds-proserv-cloud</artifactId>
+		<version>1.0-GUITAR</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-security-config</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-cache-common</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>${auth0-jwt.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+			        <layers>
+			            <enabled>true</enabled>
+			        </layers>	        
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

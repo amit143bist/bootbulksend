@@ -1,0 +1,107 @@
+spring:
+  application:
+    name: dsshell
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+proserv:
+  dsappdata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+  dscoredata:
+    username: docusignuser
+    password: testing1
+  dsenvelopedata:
+    username: docusignuser
+    password: testing1  
+  dsreportdata:
+    username: docusignuser
+    password: testing1  
+  application:
+    username: docusignuser
+    password: testing1
+
+docusign:
+  api:
+    userid: eddc8f7b-da28-4e27-ba0c-7a15fb3ab914
+    scopes: signature impersonation
+    baseuri: https://demo.docusign.net/restapi/v2.1
+    account: 80920da7-e7cc-48d7-a461-68c102dc8dc8
+    apithresholdlimitpercent: 10
+    group:
+      groupid: 7466351
+      pagesize: 10
+bulk:
+  update:
+    rolename: reviewer
+
+ds:
+  async:
+    queuecapacity: 10
+    maxpoolsize: 999999
+    corepoolsize: 4
+    executornameprefix: DSExecutor-
+  api:
+    bulksend:
+      recordperpage: 13
+      batchnameprefix: IHDA_
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"      
+
+feign.client.config.default.connectTimeout: 3000000
+feign.client.config.default.readTimeout: 3000000
+
+dsauthentication:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+dsappdata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

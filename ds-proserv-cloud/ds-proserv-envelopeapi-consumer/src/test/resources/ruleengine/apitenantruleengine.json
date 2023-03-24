@@ -1,0 +1,437 @@
+{
+  "outputColumns": [
+    {
+      "columnName": "applicationId",
+      "columnPath": ".applicationId"
+    },
+    {
+      "columnName": "applicationType",
+      "columnPath": ".applicationType"
+    },
+    {
+      "columnName": "tenant::tenantappid",
+      "columnPath": ".applicationId",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::communitypartnercode",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='CommunityPartnerCode')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::communitypartnercode",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='CommunityPartnerCode')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::communitypartnername",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='CommunityPartnerName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::communitypartnername",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='CommunityPartnerName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::languagepreference",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].LanguagePreference",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::languagepreference",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].LanguagePreference",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lfulllandlordname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FullLandlordName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lemail",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='Email')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::lemail",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='Email')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::lfulllandlordname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FullLandlordName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lfirstname",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='FirstName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lmiddlename",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='MiddleName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::llastname",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='LastName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lnamesuffix",
+      "columnPath": ".recipients[?(@.roleName=='landlord')].items[?(@.dataLabel=='NameSuffix')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tfirstname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FirstName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tmiddlename",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='MiddleName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tlastname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='LastName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tnamesuffix",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='NameSuffix')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::temail",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Email')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tfulltenantname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FullTenantName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tfulltenantname",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FullTenantName')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::temail",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Email')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lisstandardized",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='IsStandardized')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::taddressline1",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AddressLine1')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::taddressline2",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AddressLine2')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tattentionto",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AttentionTo')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tcity",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='City')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='State')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tzip",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Zip')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tcounty",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='County')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedaddressline1",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedAddressLine1')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedaddressline2",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedAddressLine2')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedattentionto",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AttentionTo')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedcity",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedCity')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedstate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedState')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedzip",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedZip')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::tstandardizedcounty",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedCounty')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::isstandardized",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='IsStandardized')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::taddressline1",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AddressLine1')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::taddressline2",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AddressLine2')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tattentionto",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AttentionTo')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tcity",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='City')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='State')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tzip",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Zip')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tcounty",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='County')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedaddressline1",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedAddressLine1')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedaddressline2",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedAddressLine2')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedattentionto",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='AttentionTo')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedcity",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedCity')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedstate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedState')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedzip",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedZip')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tstandardizedcounty",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='StandardizedCounty')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tfinancialhardship",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FinancialHardship')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::trentduebehind",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='RentDueBehind')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tfederalhousingsubsidy",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='FederalHousingSubsidy')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner1name",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner1Name')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner1income2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner1Income2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner2name",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner2Name')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner2income2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner2Income2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner3name",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner3Name')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner3income2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner3Income2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner4name",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner4Name')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner4income2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner4Income2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner5name",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner5Name')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::twageearner5income2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='WageEarner5Income2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::ttotalhouseholdincome2020",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalHouseholdIncome2020')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tpeopleinhousehold",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='PeopleInHousehold')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::taid2020recieved",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Aid2020Received')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lmonthlyrentamount",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='MonthlyRentalAmount')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::ltotalrentpastdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRentPastDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tnext90daysrenthelpneeded",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='Next90DaysRentHelpNeeded')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::ttotalrentdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRentDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::ltotalmonthspastdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalMonthsPastDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::ltotalrentdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRentDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::ltotalrppgrant",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRPPGrant')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tmonthlyrentamount",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='MonthlyRentalAmount')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::ttotalmonthspastdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalMonthsPastDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::ttotalrentpastdue",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRentPastDue')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::ttotalrppgrant",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='TotalRPPGrant')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lmoveindate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='MoveInDate')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tmoveindate",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='MoveInDate')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "landlord::lisaccepted",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='IsAccepted')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::tisaccepted",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='IsAccepted')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    },
+    {
+      "columnName": "tenant::totherprogramsassistance",
+      "columnPath": ".recipients[?(@.roleName=='tenant')].items[?(@.dataLabel=='OtherProgramsAssistance')].dataValue",
+      "columnDataType": "TEXTFROMARRAY"
+    }
+  ]
+}

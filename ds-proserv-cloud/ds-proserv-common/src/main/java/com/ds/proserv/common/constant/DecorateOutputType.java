@@ -1,0 +1,6 @@
+package com.ds.proserv.common.constant;
+
+public enum DecorateOutputType {
+
+	DATE, DATETIME, ARRAY, ARRAYMAP, SPLITCOLUMNTOROW,DATEASEPOCHTIME, DATETIMEASEPOCHTIME, REPLACECOLVALUE;
+}

@@ -1,0 +1,72 @@
+{
+	"sqlOptions": [
+		{
+			"queryIdentifier": "landlordcp",
+			"queryType": "fetchRecordIds",
+			"selectSql": "select LA.LandlordAppID FROM dbo.LandlordApp LA",
+			"whereClause": "where LA.CommunityPartnerID is not null and LA.TransactionStatus = 0 and LA.CreatedDate between (:inputFromDate) and (:inputToDate) order by LA.LandlordAppID asc OFFSET :offset ROWS FETCH NEXT :limit ROWS ONLY"
+		},
+		{
+			"queryIdentifier": "landlordcp",
+			"queryType": "fetchRecordData",
+			"selectSql": "select LA.*, A.AddressLine1, A.AddressLine2, A.AttentionTo, A.City, A.State, A.Zip, A.County, A.StandardizedAddressID, A.StandardizedAddressLine1, A.StandardizedAddressLine2, A.StandardizedCity, A.StandardizedState, A.StandardizedZip, A.StandardizedCounty, A.IsStandardized, A.IsAccepted, LI.FirstName AS LandlordFirstName, LI.MiddleName AS LandlordMiddleName, LI.LastName AS LandlordLastname, LI.NameSuffix AS LandlordNameSuffix, LI.FullLandlordName, LI.Email AS LandlordEmail, TI.FirstName AS TenantFirstName, TI.MiddleName AS TenantMiddleName, TI.LastName AS TenantLastName, TI.NameSuffix AS TenantNameSuffix, TI.FullTenantName, TI.Email As TenantEmail, CP.CommunityPartnerCode, CP.CommunityPartnerName FROM dbo.LandlordApp LA INNER JOIN dbo.Address A ON A.AddressID = LA.AddressID INNER JOIN dbo.LandlordInfo LI ON LI.LandlordID = LA.LandlordID INNER JOIN dbo.TenantInfo TI ON TI.TenantID = LA.TenantID INNER JOIN dbo.CommunityPartner CP ON CP.CommunityPartnerID = LA.CommunityPartnerID",
+			"whereClause": "where LA.LandlordAppID in (:LandlordAppIDs)"
+		},
+		{
+			"queryIdentifier": "landlordcp",
+			"queryType": "updateRecordData",
+			"updateSql": "{call sproc_tracklandlordapps_insert_update(:json, :status)}"
+		},
+		{
+			"queryIdentifier": "tenantcp",
+			"queryType": "fetchRecordIds",
+			"selectSql": "select TA.TenantAppID FROM dbo.TenantApp TA",
+			"whereClause": "where TA.CommunityPartnerID is not null and TA.TransactionStatus = 0 and TA.CreatedDate between (:inputFromDate) and (:inputToDate) order by TA.TenantAppID asc OFFSET :offset ROWS FETCH NEXT :limit ROWS ONLY"
+		},
+		{
+			"queryIdentifier": "tenantcp",
+			"queryType": "fetchRecordData",
+			"selectSql": "select TA.*, A.AddressLine1, A.AddressLine2, A.AttentionTo, A.City, A.State, A.Zip, A.County, A.StandardizedAddressID, A.StandardizedAddressLine1, A.StandardizedAddressLine2, A.StandardizedCity, A.StandardizedState, A.StandardizedZip, A.StandardizedCounty, A.IsStandardized, A.IsAccepted, LI.FirstName AS LandlordFirstName, LI.MiddleName AS LandlordMiddleName, LI.LastName AS LandlordLastname, LI.NameSuffix AS LandlordNameSuffix, LI.FullLandlordName, LI.Email AS LandlordEmail, TI.FirstName AS TenantFirstName, TI.MiddleName AS TenantMiddleName, TI.LastName AS TenantLastName, TI.NameSuffix AS TenantNameSuffix, TI.FullTenantName, TI.Email As TenantEmail, CP.CommunityPartnerCode, CP.CommunityPartnerName FROM dbo.TenantApp TA INNER JOIN dbo.Address A ON A.AddressID = TA.AddressID INNER JOIN dbo.LandlordInfo LI ON LI.LandlordID = TA.LandlordID INNER JOIN dbo.TenantInfo TI ON TI.TenantID = TA.TenantID INNER JOIN dbo.CommunityPartner CP ON CP.CommunityPartnerID = TA.CommunityPartnerID",
+			"whereClause": "where TA.TenantAppID in (:TenantAppIDs)"
+		},
+		{
+			"queryIdentifier": "tenantcp",
+			"queryType": "updateRecordData",
+			"updateSql": "{call sproc_tracktenantapps_insert_update(:json, :status)}"
+		},
+		{
+			"queryIdentifier": "landlord",
+			"queryType": "fetchRecordIds",
+			"selectSql": "select LA.LandlordAppID FROM dbo.LandlordApp LA",
+			"whereClause": "where LA.CommunityPartnerID is null and LA.CreatedDate between (:inputFromDate) and (:inputToDate) order by LA.LandlordAppID asc OFFSET :offset ROWS FETCH NEXT :limit ROWS ONLY"
+		},
+		{
+			"queryIdentifier": "landlord",
+			"queryType": "fetchRecordData",
+			"selectSql": "select LA.*, A.AddressLine1, A.AddressLine2, A.AttentionTo, A.City, A.State, A.Zip, A.County, A.StandardizedAddressID, A.StandardizedAddressLine1, A.StandardizedAddressLine2, A.StandardizedCity, A.StandardizedState, A.StandardizedZip, A.StandardizedCounty, A.IsStandardized, A.IsAccepted, LI.FirstName AS LandlordFirstName, LI.MiddleName AS LandlordMiddleName, LI.LastName AS LandlordLastname, LI.NameSuffix AS LandlordNameSuffix, LI.FullLandlordName, LI.Email AS LandlordEmail, TI.FirstName AS TenantFirstName, TI.MiddleName AS TenantMiddleName, TI.LastName AS TenantLastName, TI.NameSuffix AS TenantNameSuffix, TI.FullTenantName, TI.Email As TenantEmail FROM dbo.LandlordApp LA INNER JOIN dbo.Address A ON A.AddressID = LA.AddressID INNER JOIN dbo.LandlordInfo LI ON LI.LandlordID = LA.LandlordID INNER JOIN dbo.TenantInfo TI ON TI.TenantID = LA.TenantID",
+			"whereClause": "where LA.LandlordAppID in (:LandlordAppIDs)"
+		},
+		{
+			"queryIdentifier": "landlord",
+			"queryType": "updateRecordData",
+			"updateSql": "{call sproc_tracklandlordapps_insert_update(:json, :status)}"
+		},
+		{
+			"queryIdentifier": "tenant",
+			"queryType": "fetchRecordIds",
+			"selectSql": "select TA.TenantAppID FROM dbo.TenantApp",
+			"whereClause": "where TA.CommunityPartnerID is null and TA.CreatedDate between (:inputFromDate) and (:inputToDate) order by TA.TenantAppID asc OFFSET :offset ROWS FETCH NEXT :limit ROWS ONLY"
+		},
+		{
+			"queryIdentifier": "tenant",
+			"queryType": "fetchRecordData",
+			"selectSql": "select TA.*, A.AddressLine1, A.AddressLine2, A.AttentionTo, A.City, A.State, A.Zip, A.County, A.StandardizedAddressID, A.StandardizedAddressLine1, A.StandardizedAddressLine2, A.StandardizedCity, A.StandardizedState, A.StandardizedZip, A.StandardizedCounty, A.IsStandardized, A.IsAccepted, LI.FirstName AS LandlordFirstName, LI.MiddleName AS LandlordMiddleName, LI.LastName AS LandlordLastname, LI.NameSuffix AS LandlordNameSuffix, LI.FullLandlordName, LI.Email AS LandlordEmail, TI.FirstName AS TenantFirstName, TI.MiddleName AS TenantMiddleName, TI.LastName AS TenantLastName, TI.NameSuffix AS TenantNameSuffix, TI.FullTenantName, TI.Email As TenantEmail FROM dbo.TenantApp TA INNER JOIN dbo.Address A ON A.AddressID = TA.AddressID INNER JOIN dbo.LandlordInfo LI ON LI.LandlordID = TA.LandlordID INNER JOIN dbo.TenantInfo TI ON TI.TenantID = TA.TenantID",
+			"whereClause": "where TA.TenantAppID in (:TenantAppIDs)"
+		},
+		{
+			"queryIdentifier": "tenant",
+			"queryType": "updateRecordData",
+			"updateSql": "{call sproc_tracktenantapps_insert_update(:json, :status)}"
+		}
+	]
+}

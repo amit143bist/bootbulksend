@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: dsenvelopedata
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    discovery:
+      enabled: false
+  profiles:
+    active: unittest
+  mvc:
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+proserv:
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+  csvdownload:
+    ruleengine: 
+      path: src\test\resources\csvdownloadruleengine.json
+  notification: 
+    deadqueue: 
+      job: 
+        triggerintervalinseconds: 600
+    migrationready: 
+      job: 
+        triggerintervalinseconds: 600
+    dsnotificationdata: 
+      username: docusignuser
+      password: testing1
+    gmail: 
+     ***REMOVED*** ***REMOVED***
+     ***REMOVED*** ***REMOVED***
+     appidentifier: cloudsystemalert@gmail.com
+     appname: SystemAlert
+     
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+  async:
+    queuecapacity: 100
+    maxpoolsize: 999999
+    corepoolsize: 40
+    executornameprefix: DSExecutor-
+    xml: 
+      queuecapacity: 100
+      maxpoolsize: 999999
+      corepoolsize: 40
+      executornameprefix: DSExecutor-

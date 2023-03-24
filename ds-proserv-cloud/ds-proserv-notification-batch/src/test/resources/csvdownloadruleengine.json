@@ -1,0 +1,43 @@
+{
+	"manageDataAPIs": [
+		{
+			"tableName": "eradata",
+			"selectSql": "select erasourcedirectory,eradestinationdirectory from eradata",
+			"whereClause": "where erasentdatetime = :envdate",
+			"sqlParams": [
+				{
+					"paramName": "inputFromDate",
+					"paramDataType": "SqlDateTime",
+					"paramPattern": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
+				},
+				{
+					"paramName": "inputToDate",
+					"paramDataType": "SqlDateTime",
+					"paramPattern": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'"
+				}
+			],		
+			"exportRunArgs": {
+				"batchType": "DOWNLOADREPORT",
+				"completeBatchOnError": true,
+				"pathParams": [
+					{
+						"paramName": "csvDownloadFolderPath",
+						"paramValue": "Z:/output/era/manifest"
+					},
+					{
+						"paramName":"csvDownloadRowsLimit",
+						"paramValue": "200000"
+						
+					},
+					{
+						"paramName":"disableCurrentDateInCSVFolderPath",
+						"paramValue": "true"
+					}
+				]
+			}
+		}
+	],
+	"jobRunArgs": {
+		"completeBatchOnError": true
+	}
+}

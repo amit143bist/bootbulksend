@@ -1,0 +1,81 @@
+spring:
+  application:
+    name: dsexceptionconsumer
+  profiles:
+    active: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        default-requeue-rejected: false
+        concurrency: 2
+        max-concurrency: 10
+      
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+            
+proserv:
+  queue: 
+    name: CORE_PARALLEL_EXCEPTION_SAVE_QUEUE
+    ttl: 2000
+  exchange:
+    name: MIGRATION_EXCHANGE
+  routing:
+       
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+         
+dscoredata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+dsenvelopedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000    
+    
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

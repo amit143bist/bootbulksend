@@ -1,0 +1,13 @@
+java -jar -Dserver.port=8090 -Dcloud.config.searchLocations=/C:/config/ C:\textura\ds-proserv-cloud\ds-proserv-config-server\target\ds-proserv-config-server-1.0-GUITAR.jar
+
+java -jar -Dspring.profiles.active=peer1 -Dmig.peer1Port=8190 -Dmig.peer2Port=8191 C:\textura\ds-proserv-cloud\ds-proserv-eureka-server\target\ds-proserv-eureka-server-1.0-GUITAR.jar
+
+java -jar -Dspring.profiles.active=peer2 -Dmig.peer1Port=8190 -Dmig.peer2Port=8191 C:\textura\ds-proserv-cloud\ds-proserv-eureka-server\target\ds-proserv-eureka-server-1.0-GUITAR.jar
+
+java -jar -Dserver.port=8290 -Dspring.profiles.active=dev -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 C:\textura\ds-proserv-cloud\ds-proserv-coredata\target\ds-proserv-coredata-1.0-GUITAR.jar
+
+java -jar -Dserver.port=8291 -Dspring.profiles.active=dev -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 C:\textura\ds-proserv-cloud\ds-proserv-coredata\target\ds-proserv-coredata-1.0-GUITAR.jar
+
+java -jar -Dserver.port=8291 -Dspring.profiles.active=dev -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 C:\devwork\ihda\ds-proserv-cloud\ds-proserv-connect-listener\target\ds-proserv-connect-listener-1.0-GUITAR.jar
+
+java -jar -Dspring.profiles.active=dev C:\textura\ds-proserv-cloud\ds-proserv-shell\target\ds-proserv-shell-1.0-GUITAR.jar @C:\textura\shellcommand.txt

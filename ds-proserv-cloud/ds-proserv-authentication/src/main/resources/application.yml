@@ -1,0 +1,78 @@
+spring:
+  application:
+    name: dsauthentication
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+proserv:
+  dsappdata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+  dscoredata:
+    username: docusignuser
+    password: testing1
+  dsenvelopedata:
+    username: docusignuser
+    password: testing1  
+  dsreportdata:
+    username: docusignuser
+    password: testing1
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+
+app:
+  authorization:
+    rsaPrivateKeyPath: /Users/pedro.barroso/dev/proservcloud/config/ds-private.key
+    rsaPublicKeyPath: /Users/pedro.barroso/dev/proservcloud/config/ds-public.key
+    integratorKey: 65ab0403-c278-4e0c-93b4-96c658cb24d9
+    aud: account-d.docusign.com
+    token:
+      expirationSeconds: 3600
+      cacheExpirationSeconds: 1800
+      testtoken: 
+  
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"  
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+      
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

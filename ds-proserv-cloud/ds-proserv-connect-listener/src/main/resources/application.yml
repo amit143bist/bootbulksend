@@ -1,0 +1,115 @@
+spring:
+  application:
+    name: dsconnectlistener
+  profiles:
+    active: dev
+
+server:
+  port: 0
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+proserv:
+  dsappdata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+  dscoredata:
+    username: docusignuser
+    password: testing1
+  dsenvelopedata:
+    username: docusignuser
+    password: testing1  
+  dsreportdata:
+    username: docusignuser
+    password: testing1  
+  application:
+    username: docusignuser
+    password: testing1
+
+connect:
+  application:
+    username: connectuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5    
+
+feign.client.config.default.connectTimeout: 3000000
+feign.client.config.default.readTimeout: 3000000
+    
+dsenvelopedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+dsappdata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000    
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+dscoredata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000    
+            
+ds:
+  connectprocessnowsync: false
+  connectqueuedasync: true
+  async:
+    queuecapacity: 100
+    maxpoolsize: 999999
+    corepoolsize: 5
+    executornameprefix: DSExecutor-  
+  processor:
+    type: IHDA
+    programtypelabel: programtype
+    langcodelabel: languagecode
+    agentcodelabel: agentcode
+    appdecisionlabel: isapproved
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+      
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"   

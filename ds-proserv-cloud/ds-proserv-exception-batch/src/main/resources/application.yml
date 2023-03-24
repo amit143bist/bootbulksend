@@ -1,0 +1,125 @@
+spring:
+  application:
+    name: dsexceptionbatch
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+proserv:
+  dsappdata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+  dscoredata:
+    username: docusignuser
+    password: testing1
+  dsenvelopedata:
+    username: docusignuser
+    password: testing1  
+  dsreportdata:
+    username: docusignuser
+    password: testing1  
+  application:
+    username: docusignuser
+    password: testing1
+  process:
+    connectbyqueue: true
+  connect: 
+    queuename: 
+
+feign.client.config.default.connectTimeout: 3000000
+feign.client.config.default.readTimeout: 3000000
+    
+dscoredata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000   
+        
+dsenvelopedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+dsappdata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+                
+ds:
+  triggerintervalinseconds: 1200
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+  sendtoconnectqueue: true
+  async:
+    queuecapacity: 100
+    maxpoolsize: 999999
+    corepoolsize: 5
+    executornameprefix: DSExecutor-  
+    xml:
+      queuecapacity: 100
+      maxpoolsize: 999999
+      corepoolsize: 5
+      executornameprefix: XMLExecutor-
+  processor:
+    type: IHDA
+    programtypelabel: programtype
+    langcodelabel: languagecode
+    agentcodelabel: agentcode
+    appdecisionlabel: isapproved
+  job:
+    retrylimit: 2
+    delayinseconds: 3600
+    batchtype: BULKEXCEPTIONRETRY
+    recordsperpage: 50
+    savedatainbulk: true
+    backsofflimit: 3
+    backsoffinterval: 60000
+    stepsleep:
+      enabled: false
+      thresholdcheck: 10
+      interval: 60000
+    
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

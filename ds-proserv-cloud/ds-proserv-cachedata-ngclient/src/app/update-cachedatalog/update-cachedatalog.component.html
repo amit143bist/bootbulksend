@@ -1,0 +1,21 @@
+<h3>Update CacheDataLog</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Cache Key</label>
+        <input type="text" class="form-control" id="cacheKey" required [(ngModel)]="cacheDataLog.cacheKey" name="firstName">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Cache Value</label>
+        <input type="text" class="form-control" id="cacheValue" required [(ngModel)]="cacheDataLog.cacheValue" name="lastName">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Cache Reference</label>
+        <input type="text" class="form-control" id="cacheReference" required [(ngModel)]="cacheDataLog.cacheReference" name="emailId">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

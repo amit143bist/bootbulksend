@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: dsenvelopeapi
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${mig.peer1-address}/eureka,http://${mig.peer2-address}/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+proserv:
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

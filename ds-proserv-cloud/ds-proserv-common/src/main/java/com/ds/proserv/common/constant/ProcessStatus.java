@@ -1,0 +1,6 @@
+package com.ds.proserv.common.constant;
+
+public enum ProcessStatus {
+
+	INPROGRESS, COMPLETED, FAILED, MANUALLY_CLOSED, RETRIED, ALL, EMPTY, NOTEMPTY, NOTCOMPLETED, COMPLETEDWITHNORECORDS;
+}

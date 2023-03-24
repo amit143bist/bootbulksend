@@ -1,0 +1,10 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>CacheDataLog List</h2>
+    
+  </div>
+  <div class="panel-body">
+    <ng2-smart-table [settings]="settings" [source]="cacheDataLogs" (deleteConfirm)="onDeleteConfirm($event)" (editConfirm)="onSaveConfirm($event)"
+ (createConfirm)="onCreateConfirm($event)"></ng2-smart-table>
+  </div>
+</div>

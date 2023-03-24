@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ds-proserv-email-common</artifactId>
+	<name>ds-proserv-email-common</name>
+	<description>Project for Email Alert Components</description>
+
+	<parent>
+		<artifactId>ds-proserv-cloud</artifactId>
+		<groupId>com.ds.proserv.cloud</groupId>
+		<version>1.0-GUITAR</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-feignservice</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-cache-common</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-gmail -->
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-gmail</artifactId>
+			<version>${google-api-services-gmail.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

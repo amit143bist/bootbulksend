@@ -1,0 +1,214 @@
+{
+  "applicationId": "2222",
+  "applicationType": "landlord",
+  "recipients": [
+    {
+      "fullName": "Landlord Name",
+      "email": "barpe061+landlord@gmail.com",
+      "roleName": "landlord",
+      "languagePreference": "EN",
+      "items": [
+        {
+          "dataLabel": "FirstName",
+          "dataValue": "Lanlord"
+        },
+        {
+          "dataLabel": "MiddleName",
+          "dataValue": "N"
+        },
+        {
+          "dataLabel": "NameSuffix",
+          "dataValue": "Phd."
+        },
+        {
+          "dataLabel": "Email",
+          "dataValue": "Phd."
+        },
+        {
+          "dataLabel": "LastName",
+          "dataValue": "LanlordLastName"
+        },
+        {
+          "dataLabel": "FullTenantName",
+          "dataValue": "FullTenantName"
+        },
+        {
+          "dataLabel": "Email",
+          "dataValue": "barpe061+landlord@gmail.com"
+        },
+        {
+          "dataLabel": "Aid2020Received",
+          "dataValue": "200.00"
+        },
+        {
+          "dataLabel": "MonthlyRentAmount",
+          "dataValue": "10000.00"
+        },
+        {
+          "dataLabel": "Jun2020PastDue",
+          "dataValue": "100.00"
+        },
+        {
+          "dataLabel": "Jul2020PastDue",
+          "dataValue": "101.00"
+        },
+        {
+          "dataLabel": "Aug2020PastDue",
+          "dataValue": "102.00"
+        },
+        {
+          "dataLabel": "Sep2020PastDue",
+          "dataValue": "103.00"
+        },
+        {
+          "dataLabel": "Oct2020PastDue",
+          "dataValue": "104.00"
+        },
+        {
+          "dataLabel": "Nov2020PastDue",
+          "dataValue": "105.00"
+        },
+        {
+          "dataLabel": "Dec2020PastDue",
+          "dataValue": "106.00"
+        },
+        {
+          "dataLabel": "Jan2021PastDue",
+          "dataValue": "107.00"
+        },
+        {
+          "dataLabel": "Feb2021PastDue",
+          "dataValue": "108.00"
+        },
+        {
+          "dataLabel": "Mar2021PastDue",
+          "dataValue": "109.00"
+        },
+        {
+          "dataLabel": "Apr2021PastDue",
+          "dataValue": "110.00"
+        },
+        {
+          "dataLabel": "May2020PastDue",
+          "dataValue": "111.00"
+        },
+        {
+          "dataLabel": "Jun2020PastDue",
+          "dataValue": "333.82"
+        },
+        {
+          "dataLabel": "Jul2020PastDue",
+          "dataValue": "333.82"
+        },
+        {
+          "dataLabel": "TotalMonthsPastDue",
+          "dataValue": "7"
+        },
+        {
+          "dataLabel": "TotalMonthsPastDue",
+          "dataValue": "7"
+        },
+        {
+          "dataLabel": "TotalRentPastDue",
+          "dataValue": "95814.16"
+        },
+        {
+          "dataLabel": "TotalRentDue",
+          "dataValue": "10000.25"
+        },
+        {
+          "dataLabel": "TotalRPPGrant",
+          "dataValue": "2535.62"
+        },
+        {
+          "dataLabel": "IsAccepted",
+          "dataValue": "0"
+        },
+        {
+          "dataLabel": "AddressLine1",
+          "dataValue": "88 New Parkway"
+        },
+        {
+          "dataLabel": "AddressLine2",
+          "dataValue": "56 Rocky Nobel Parkway"
+        },
+        {
+          "dataLabel": "AddressLine3",
+          "dataValue": "AddressLine3"
+        },
+        {
+          "dataLabel": "City",
+          "dataValue": "Corpus Christi"
+        },
+        {
+          "dataLabel": "State",
+          "dataValue": "ND"
+        },
+        {
+          "dataLabel": "Zip",
+          "dataValue": "41802-1822"
+        },
+        {
+          "dataLabel": "CommunityPartnerCode",
+          "dataValue": "11111"
+        },
+        {
+          "dataLabel": "CommunityPartnerName",
+          "dataValue": "communitypartnername"
+        },
+        {
+          "dataLabel": "LandlordAppID",
+          "dataValue": "LandlordAppID"
+        },
+        {
+          "dataLabel": "LeaseType",
+          "dataValue": "LeaseType"
+        },
+        {
+          "dataLabel": "MoveInDate",
+          "dataValue": "MoveInDate"
+        },
+        {
+          "dataLabel": "Next90DaysRentHelpNeeded",
+          "dataValue": "10000.00"
+        }
+      ]
+    },
+    {
+      "fullName": "Tenant Name",
+      "email": "barpe061+tenant@gmail.com",
+      "roleName": "tenant",
+      "languagePreference": "ES",
+      "items": [
+        {
+          "dataLabel": "Name",
+          "dataValue": "Tenant Name"
+        },
+        {
+          "dataLabel": "FullTenantName",
+          "dataValue": "Tenant Name"
+        },
+        {
+          "dataLabel": "FirstName",
+          "dataValue": "Lanlord"
+        },
+        {
+          "dataLabel": "MiddleName",
+          "dataValue": "N"
+        },
+        {
+          "dataLabel": "NameSuffix",
+          "dataValue": "Phd."
+        },
+        {
+          "dataLabel": "LastName",
+          "dataValue": "LanlordLastName"
+        },
+        {
+          "dataLabel": "Email",
+          "dataValue": "barpe061+landlord@gmail.com"
+        }
+      ]
+    }
+  ]
+}

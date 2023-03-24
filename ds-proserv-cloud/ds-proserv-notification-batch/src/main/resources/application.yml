@@ -1,0 +1,88 @@
+spring:
+  application:
+    name: dsnotificationbatch
+  profiles:
+    active: dev
+  mvc:
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  port: 0
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    
+proserv:
+  dscachedata:
+    username: docusignuser
+    password: testing1
+
+ds:
+  async:
+    queuecapacity: 9999999
+    maxpoolsize: 100
+    corepoolsize: 40
+    executornameprefix: DSExecutor- 
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"    
+
+feign.client.config.default.connectTimeout: 3000000
+feign.client.config.default.readTimeout: 3000000
+
+dscoredata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+dsappdata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+dsnotificationdata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000        
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+          
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

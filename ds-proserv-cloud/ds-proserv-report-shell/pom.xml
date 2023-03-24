@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ds-proserv-report-shell</artifactId>
+	<name>ds-proserv-report-shell</name>
+	<description>Project for Report Shell</description>
+
+	<parent>
+		<groupId>com.ds.proserv.cloud</groupId>
+		<artifactId>ds-proserv-cloud</artifactId>
+		<version>1.0-GUITAR</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.shell</groupId>
+			<artifactId>spring-shell-starter</artifactId>
+			<version>${spring.shell.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-commondata</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-report-common</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+					<layers>
+						<enabled>true</enabled>
+					</layers>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

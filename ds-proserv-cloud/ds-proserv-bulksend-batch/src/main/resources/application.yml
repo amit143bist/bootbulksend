@@ -1,0 +1,123 @@
+spring:
+  application:
+    name: dsbulksendbatch
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    
+feign.client.config.default.connectTimeout: 3000000
+feign.client.config.default.readTimeout: 3000000
+    
+ds:
+  triggerintervalinseconds: 1200
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+  async:
+    queuecapacity: 100
+    maxpoolsize: 999999
+    corepoolsize: 40
+    executornameprefix: DSExecutor-
+
+dsauthentication:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000 
+    
+dscoredata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000  
+
+dsbulksenddata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000 
+    
+dsbulksendsourcedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000 
+            
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+
+proserv:
+  send:
+    queryidentifiers: landlordcp,tenantcp,landlord,tenant
+    landlord:
+      userid: 
+      accountid: 
+      usetemplate: true
+      ruleenginepath: 
+      selectrecordidquerytype: 
+        name: fetchRecordIds
+        bydaterange: true
+      selectrecorddataquerytype: 
+        name: fetchRecordData
+        primarykeyparametername: LandlordAppIDs
+      updaterecorddataquerytype: 
+        name: updateRecordData
+        primarykeyparametername: LandlordAppIDs
+      templateid: 
+      draftenveloperequest:
+        filepath: 
+    tenant:
+      userid: 
+      accountid: 
+      usetemplate: true
+      ruleenginepath: 
+      selectrecordidquerytype: 
+        name: fetchRecordIds
+        bydaterange: true
+      selectrecorddataquerytype: 
+        name: fetchRecordData
+        primarykeyparametername: TenantAppIDs
+      updaterecorddataquerytype: 
+        name: updateRecordData
+        primarykeyparametername: TenantAppIDs
+      templateid: 
+      draftenveloperequest:
+        filepath:    
+        
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    discovery:
+      enabled: false
+  profiles:
+    active: unittest
+
+proserv:
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+app:
+  authorization:
+    rsaPrivateKeyPath: src/test/resources/keys/ds-private.key
+    rsaPublicKeyPath: src/test/resources/keys/ds-public.key
+    integratorKey: 65ab0403-c278-4e0c-93b4-96c658cb24d9
+    aud: account-d.docusign.com
+    token:
+      expirationSeconds: 3600
+      cacheExpirationSeconds: 4
+      testtoken: 
+  
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"   

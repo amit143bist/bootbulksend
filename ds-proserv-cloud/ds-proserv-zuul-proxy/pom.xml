@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.docusign.proserv.cloud</groupId>
+	<artifactId>ds-proserv-zuul-proxy</artifactId>
+	<name>ds-proserv-zuul-proxy</name>
+	<description>Microservice for zuul proxy server</description>
+
+	<parent>
+		<groupId>com.ds.proserv.cloud</groupId>
+		<artifactId>ds-proserv-cloud</artifactId>
+		<version>1.0-GUITAR</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+			<version>${netflix-zuul.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-feignservice</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+			        <layers>
+			            <enabled>true</enabled>
+			        </layers>	        
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

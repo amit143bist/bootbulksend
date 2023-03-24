@@ -1,0 +1,79 @@
+spring:
+  application:
+    name: dsenvelopeapi
+  profiles:
+    active: unittest
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    discovery:
+      enabled: false
+
+send:
+  landlord:
+    template: eeae7b76-3374-473a-9574-b306d67c1181
+    headers: landlord::landlordappid,landlord::communitypartnercode,tenant::communitypartnercode,landlord::communitypartnername,tenant::communitypartnername,landlord::languagepreference,tenant::languagepreference,landlord::lemail,landlord::lfulllandlordname,tenant::tfulllandlordname,landlord::lfirstname,landlord::lmiddlename,landlord::llastname,landlord::lnamesuffix,tenant::tfirstname,tenant::tmiddlename,tenant::tlastname,tenant::tnamesuffix,landlord::temail,tenant::temail,landlord::lfulltenantname,tenant::tfulltenantname,landlord::lisstandardized,landlord::taddressline1,landlord::taddressline2,landlord::tattentionto,landlord::tcity,landlord::tstate,landlord::tzip,landlord::tcounty,landlord::tstandardizedaddressline1,landlord::tstandardizedaddressline2,landlord::tstandardizedattentionto,landlord::tstandardizedcity,landlord::tstandardizedstate,landlord::tstandardizedzip,landlord::tstandardizedcounty,tenant::tisstandardized,tenant::taddressline1,tenant::taddressline2,tenant::tattentionto,tenant::tcity,tenant::tstate,tenant::tzip,tenant::tcounty,tenant::tstandardizedaddressline1,tenant::tstandardizedaddressline2,tenant::tstandardizedattentionto,tenant::tstandardizedcity,tenant::tstandardizedstate,tenant::tstandardizedzip,tenant::tstandardizedcounty,landlord::laid2020received,landlord::lnext90daysrenthelpneeded,landlord::lmonthlyrentamount,landlord::ltotalmonthspastdue,landlord::ltotalrentpastdue,landlord::lmay2021due,landlord::ljun2021due,landlord::ljul2021due,landlord::ldec2020pastdue,landlord::lnov2020pastdue,landlord::ljan2021pastdue,landlord::lfeb2021pastdue,landlord::lmar2021pastdue,landlord::lapr2021pastdue,landlord::ljun2020pastdue,landlord::lmay2020pastdue,landlord::ljul2020pastdue,landlord::laug2020pastdue,landlord::lsep2020pastdue,landlord::loct2020pastdue,landlord::ltotalrentdue,landlord::ltotalrppgrant,tenant::tmonthlyrentamount,tenant::ttotalmonthspastdue,tenant::ttotalrentpastdue,landlord::lleasetype,tenant::tleasetype,landlord::lmoveindate,tenant::tmoveindate,landlord::lisaccepted,tenant::tisaccepted,tenant::tfulllandlordname,tenant::tfulltenantname
+    ruleengine:
+      path: src/test/resources/ruleengine/apilandlordruleengine.json
+  tenant:
+    template: bdb51fd9-3424-4052-a5f9-0084b7dae830
+    headers: tenant::tenantappid,tenant::communitypartnercode,landlord::communitypartnercode,tenant::communitypartnername,landlord::communitypartnername,landlord::languagepreference,tenant::languagepreference,landlord::lfulllandlordname,landlord::lemail,tenant::lemail,tenant::lfulllandlordname,landlord::lfirstname,landlord::lmiddlename,landlord::llastname,landlord::lnamesuffix,tenant::tfirstname,tenant::tmiddlename,tenant::tlastname,tenant::tnamesuffix,landlord::temail,landlord::tfulltenantname,tenant::tfulltenantname,tenant::temail,landlord::lisstandardized,landlord::taddressline1,landlord::taddressline2,landlord::tattentionto,landlord::tcity,landlord::tstate,landlord::tzip,landlord::tcounty,landlord::tstandardizedaddressline1,landlord::tstandardizedaddressline2,landlord::tstandardizedattentionto,landlord::tstandardizedcity,landlord::tstandardizedstate,landlord::tstandardizedzip,landlord::tstandardizedcounty,tenant::isstandardized,tenant::taddressline1,tenant::taddressline2,tenant::tattentionto,tenant::tcity,tenant::tstate,tenant::tzip,tenant::tcounty,tenant::tstandardizedaddressline1,tenant::tstandardizedaddressline2,tenant::tstandardizedattentionto,tenant::tstandardizedcity,tenant::tstandardizedstate,tenant::tstandardizedzip,tenant::tstandardizedcounty,tenant::tfinancialhardship,tenant::trentduebehind,tenant::tfederalhousingsubsidy,tenant::twageearner1name,tenant::twageearner1income2020,tenant::twageearner2name,tenant::twageearner2income2020,tenant::twageearner3name,tenant::twageearner3income2020,tenant::ttotalhouseholdincome2020,tenant::tpeopleinhousehold,tenant::taid2020recieved,landlord::lmonthlyrentamount,landlord::ltotalrentpastdue,tenant::tnext90daysrenthelpneeded,tenant::ttotalrentdue,landlord::ljun2020pastdue,landlord::ljul2020pastdue,landlord::laug2020pastdue,landlord::lsep2020pastdue,landlord::loct2020pastdue,landlord::lnov2020pastdue,landlord::ldec2020pastdue,landlord::ljan2021pastdue,landlord::lfeb2021pastdue,landlord::lmar2021pastdue,landlord::lapr2021pastdue,landlord::lmay2021pastdue,landlord::ltotalmonthspastdue,landlord::ljun2021due,landlord::ljul2021due,landlord::laug2021due,landlord::ltotalrentdue,landlord::ltotalrppgrant,tenant::tmonthlyrentamount,tenant::ttotalmonthspastdue,tenant::ttotalrentpastdue,tenant::ttotalrppgrant,landlord::lmoveindate,tenant::tmoveindate,landlord::lisaccepted,tenant::tisaccepted,tenant::totherprogramsassistance
+    ruleengine:
+      path: src/test/resources/ruleengine/apitenantruleengine.json
+
+
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+
+
+
+  processfailure:
+    queuename: CORE_PARALLEL_PROCESS_FAILURE_QUEUE
+
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+  dsihdadata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+
+dsauthentication:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+app:
+  authorization:
+    userId: eddc8f7b-da28-4e27-ba0c-7a15fb3ab914
+    scopes: signature impersonation
+    accountguid: 80920da7-e7cc-48d7-a461-68c102dc8dc8
+    userinfoendpoint: https://account-d.docusign.com/oauth/userinfo
+    token:
+      testtoken: Uggg4YA55IqvKQAeuhtvqoYmKDU=
+      apiThresholdLimitPercent: 20
+
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

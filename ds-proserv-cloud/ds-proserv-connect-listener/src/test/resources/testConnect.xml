@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocuSignEnvelopeInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.docusign.net/API/3.0">
+	<EnvelopeStatus>
+		<RecipientStatuses>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>frankftsai.customer+bulk1@gmail.com</Email>
+				<UserName>bulk user1</UserName>
+				<RoutingOrder>1</RoutingOrder>
+				<Sent>2020-07-15T11:21:31.417</Sent>
+				<Delivered>2020-07-15T11:22:03.75</Delivered>
+				<Signed>2020-07-15T11:22:41.78</Signed>
+				<DeclineReason xsi:nil="true" />
+				<Status>Completed</Status>
+				<RecipientIPAddress>12.148.184.130</RecipientIPAddress>
+				<CustomFields />
+				<TabStatuses>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>1014</XPosition>
+						<YPosition>14</YPosition>
+						<TabLabel>Data Field 218</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>Agent License Number</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Agent License Number</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>189</XPosition>
+						<YPosition>1264</YPosition>
+						<TabLabel>#HREF 1</TabLabel>
+						<TabName>https://coveredcaagent.pinnacletpa.com/agentpayment/</TabName>
+						<TabValue>COVERED CALIFORNIA AGENT PAYMENT PORTAL</TabValue>
+						<DocumentID>1</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>COVERED CALIFORNIA AGENT PAYMENT PORTAL</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>275</XPosition>
+						<YPosition>337</YPosition>
+						<TabLabel>#HREF 2</TabLabel>
+						<TabName>https://hbex.coveredca.com/toolkit/webinars-briefings/downloads/Voter_Registration_Training_Guide_3-13-2020.pdf</TabName>
+						<TabValue>Voter Registration Training Guide</TabValue>
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Voter Registration Training Guide</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>275</XPosition>
+						<YPosition>452</YPosition>
+						<TabLabel>#HREF 3</TabLabel>
+						<TabName>https://hbex.coveredca.com/toolkit/webinars-briefings/downloads/Voter_Registration_Training_Guide_In_Person_3-13-2020.pdf</TabName>
+						<TabValue>Voter Registration Task Guide - In Person Assistance</TabValue>
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Voter Registration Task Guide - In Person Assistance</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>277</XPosition>
+						<YPosition>500</YPosition>
+						<TabLabel>#HREF 4</TabLabel>
+						<TabName>https://hbex.coveredca.com/toolkit/webinars-briefings/downloads/Voter_Registration_Training_Guide_Phone_3-13-2020.pdf</TabName>
+						<TabValue>Voter Registration Task Guide - Phone Assistance</TabValue>
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Voter Registration Task Guide - Phone Assistance</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>1018</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>Data Field 218 220</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>Agent License Number</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Agent License Number</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>1279</XPosition>
+						<YPosition>339</YPosition>
+						<TabLabel>Note 360</TabLabel>
+						<TabName>Note to recipient</TabName>
+						<TabValue>The information populated in this section reflects where and how your commissions will be paid. If your payment type (sole proprietor or corporation) is incorrect please decline the Agreement and enter the correction information in the pop up window.</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>The information populated in this section reflects where and how your commissions will be paid. If your payment type (sole proprietor or corporation) is incorrect please decline the Agreement and enter the correction information in the pop up window.</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>268</XPosition>
+						<YPosition>156</YPosition>
+						<TabLabel>VERSION_NUM</TabLabel>
+						<TabName>VERSION_NUM</TabName>
+						<TabValue>Version123</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>Version123</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>518</XPosition>
+						<YPosition>616</YPosition>
+						<TabLabel>PHONE</TabLabel>
+						<TabName>Telephone Number (555-555-5555)</TabName>
+						<TabValue>1231231234</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>1231231234</OriginalValue>
+						<ValidationPattern>^\d{3}-?\d{3}-?\d{4}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>516</XPosition>
+						<YPosition>585</YPosition>
+						<TabLabel>SSN</TabLabel>
+						<TabName>Social Security Number</TabName>
+						<TabValue>123456789</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>123456789</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>SSN</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>860</XPosition>
+						<YPosition>120</YPosition>
+						<TabLabel>SSN</TabLabel>
+						<TabName>Social Security Number</TabName>
+						<TabValue>123456789</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>123456789</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>243</XPosition>
+						<YPosition>100</YPosition>
+						<TabLabel>VERSION_NUM</TabLabel>
+						<TabName>VERSION_NUM</TabName>
+						<TabValue>version#123</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>version#123</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>162</XPosition>
+						<YPosition>460</YPosition>
+						<TabLabel>ADDRESS_1</TabLabel>
+						<TabName>Address line 1</TabName>
+						<TabValue>mail addre1</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>mail addre1</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>164</XPosition>
+						<YPosition>516</YPosition>
+						<TabLabel>CITY</TabLabel>
+						<TabName>CITY</TabName>
+						<TabValue>city</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>city</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>477</XPosition>
+						<YPosition>520</YPosition>
+						<TabLabel>STATE</TabLabel>
+						<TabName>STATE</TabName>
+						<TabValue>ST</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>ST</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>537</XPosition>
+						<YPosition>516</YPosition>
+						<TabLabel>ZIP</TabLabel>
+						<TabName>ZIP</TabName>
+						<TabValue>12345</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>12345</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>262</XPosition>
+						<YPosition>127</YPosition>
+						<TabLabel>VERSION_NUM</TabLabel>
+						<TabName>VERSION_NUM</TabName>
+						<TabValue>version#123</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>version#123</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>629</XPosition>
+						<YPosition>758</YPosition>
+						<TabLabel>SSN</TabLabel>
+						<TabName>Social Security Number</TabName>
+						<TabValue>123456789</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>123456789</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>SSN</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>164</XPosition>
+						<YPosition>872</YPosition>
+						<TabLabel>CALIFORNIA_RESIDENT</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>X</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>164</XPosition>
+						<YPosition>908</YPosition>
+						<TabLabel>CALIFORNIA_NONRESIDENT</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>X</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>212</XPosition>
+						<YPosition>943</YPosition>
+						<TabLabel>NO_SERVICES_PERFORMED</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>X</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>210</XPosition>
+						<YPosition>977</YPosition>
+						<TabLabel>FRANCHISE_TAX_BOARD</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>X</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>162</XPosition>
+						<YPosition>800</YPosition>
+						<TabLabel>Entity Type</TabLabel>
+						<TabName>Individual or Sole Proprietor</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>X</OriginalValue>
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>972</XPosition>
+						<YPosition>1089</YPosition>
+						<TabLabel>PHONE</TabLabel>
+						<TabName>TELEPHONE NUMBER (555-555-5555)</TabName>
+						<TabValue>1231231234</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>1231231234</OriginalValue>
+						<ValidationPattern>^\d{3}-?\d{3}-?\d{4}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>733</XPosition>
+						<YPosition>560</YPosition>
+						<TabLabel>LIC_EXP</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>12/12/2021</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>12/12/2021</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Date</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>787</XPosition>
+						<YPosition>114</YPosition>
+						<TabLabel>CONTRACT NUMBER</TabLabel>
+						<TabName>CONTRACT NUMBER</TabName>
+						<TabValue>12-A-12345</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>12-A-12345</OriginalValue>
+						<ValidationPattern>^(\d{2}-?[a-zA-Z]{1}-?)?\d{1,5}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>943</XPosition>
+						<YPosition>260</YPosition>
+						<TabLabel>LICENSE_NUMBER</TabLabel>
+						<TabName>LICENSE_NUMBER</TabName>
+						<TabValue>lic1234</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>lic1234</OriginalValue>
+						<ValidationPattern>^[a-zA-Z0-9]{7}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>708</XPosition>
+						<YPosition>64</YPosition>
+						<TabLabel>CONTRACT NUMBER</TabLabel>
+						<TabName>CONTRACT NUMBER</TabName>
+						<TabValue>12-A-12345</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>12-A-12345</OriginalValue>
+						<ValidationPattern>^(\d{2}-?[a-zA-Z]{1}-?)?\d{1,5}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>518</XPosition>
+						<YPosition>560</YPosition>
+						<TabLabel>LICENSE_NUMBER</TabLabel>
+						<TabName>LICENSE_NUMBER</TabName>
+						<TabValue>lic1234</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>lic1234</OriginalValue>
+						<ValidationPattern>^[a-zA-Z0-9]{7}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>1031</XPosition>
+						<YPosition>56</YPosition>
+						<TabLabel>LICENSE_NUMBER</TabLabel>
+						<TabName>LICENSE_NUMBER</TabName>
+						<TabValue>lic1234</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>lic1234</OriginalValue>
+						<ValidationPattern>^[a-zA-Z0-9]{7}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>1012</XPosition>
+						<YPosition>50</YPosition>
+						<TabLabel>LICENSE_NUMBER</TabLabel>
+						<TabName>LICENSE_NUMBER</TabName>
+						<TabValue>lic1234</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>lic1234</OriginalValue>
+						<ValidationPattern>^[a-zA-Z0-9]{7}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>EmailAddress</TabType>
+						<Status>Signed</Status>
+						<XPosition>864</XPosition>
+						<YPosition>400</YPosition>
+						<TabLabel>Email Address</TabLabel>
+						<TabName>Email Address</TabName>
+						<TabValue>frankftsai.customer+bulk1@gmail.com</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>frankftsai.customer+bulk1@gmail.com</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>EmailAddress</TabType>
+						<Status>Signed</Status>
+						<XPosition>906</XPosition>
+						<YPosition>1177</YPosition>
+						<TabLabel>Email Address 338</TabLabel>
+						<TabName>Email Address</TabName>
+						<TabValue>frankftsai.customer+bulk1@gmail.com</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>frankftsai.customer+bulk1@gmail.com</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>EmailAddress</TabType>
+						<Status>Signed</Status>
+						<XPosition>550</XPosition>
+						<YPosition>685</YPosition>
+						<TabLabel>Email Address</TabLabel>
+						<TabName>Email Address</TabName>
+						<TabValue>frankftsai.customer+bulk1@gmail.com</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>frankftsai.customer+bulk1@gmail.com</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>181</XPosition>
+						<YPosition>400</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>208</XPosition>
+						<YPosition>1095</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>75</XPosition>
+						<YPosition>1175</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>106</XPosition>
+						<YPosition>341</YPosition>
+						<TabLabel>Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>68</XPosition>
+						<YPosition>1056</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>518</XPosition>
+						<YPosition>529</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>162</XPosition>
+						<YPosition>379</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>81</XPosition>
+						<YPosition>145</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>FullName</TabType>
+						<Status>Signed</Status>
+						<XPosition>304</XPosition>
+						<YPosition>887</YPosition>
+						<TabLabel>Full Name</TabLabel>
+						<TabName>Full Name</TabName>
+						<TabValue>bulk user1</TabValue>
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>bulk user1</OriginalValue>
+					</TabStatus>
+					<TabStatus>
+						<TabType>SignerAttachment</TabType>
+						<Status>Signed</Status>
+						<XPosition>879</XPosition>
+						<YPosition>545</YPosition>
+						<TabLabel>Signer Attachment 328</TabLabel>
+						<TabName>Signer Attachment</TabName>
+						<TabValue />
+						<DocumentID>1</DocumentID>
+						<PageNumber>2</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>127</XPosition>
+						<YPosition>1056</YPosition>
+						<TabLabel>Signature 1</TabLabel>
+						<TabName>Sign Here</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>291</XPosition>
+						<YPosition>1260</YPosition>
+						<TabLabel>Signature 314</TabLabel>
+						<TabName>Sign Here</TabName>
+						<TabValue />
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>216</XPosition>
+						<YPosition>1108</YPosition>
+						<TabLabel>Signature 1 326</TabLabel>
+						<TabName>Sign Here</TabName>
+						<TabValue />
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>InitialHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>962</XPosition>
+						<YPosition>1229</YPosition>
+						<TabLabel>Initial fa90af0a-b7b2-4820-a61f-b5f8d1630b73</TabLabel>
+						<TabName>InitialHere</TabName>
+						<TabValue />
+						<DocumentID>1</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>InitialHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>352</XPosition>
+						<YPosition>554</YPosition>
+						<TabLabel>Initial 325</TabLabel>
+						<TabName>Initial Here</TabName>
+						<TabValue />
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>518</XPosition>
+						<YPosition>652</YPosition>
+						<TabLabel>BUSINESS_FAX</TabLabel>
+						<TabName>Fax Number (555-555-5555)</TabName>
+						<TabValue>1231231234</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>1231231234</OriginalValue>
+						<ValidationPattern>^\d{3}-?\d{3}-?\d{4}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>668</XPosition>
+						<YPosition>1091</YPosition>
+						<TabLabel>AUTHORIZED_TITLE</TabLabel>
+						<TabName>Signer's Title</TabName>
+						<TabValue>auth title</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>auth title</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>531</XPosition>
+						<YPosition>462</YPosition>
+						<TabLabel>ADDRESS_2</TabLabel>
+						<TabName>ADDRESS_2</TabName>
+						<TabValue />
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>56</XPosition>
+						<YPosition>1225</YPosition>
+						<TabLabel>ADDRESS_1</TabLabel>
+						<TabName>ADDRESS_1</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>660</XPosition>
+						<YPosition>1225</YPosition>
+						<TabLabel>ADDRESS_2</TabLabel>
+						<TabName>ADDRESS_2</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>64</XPosition>
+						<YPosition>1264</YPosition>
+						<TabLabel>CITY</TabLabel>
+						<TabName>CITY</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>537</XPosition>
+						<YPosition>1266</YPosition>
+						<TabLabel>STATE</TabLabel>
+						<TabName>STATE</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>625</XPosition>
+						<YPosition>1264</YPosition>
+						<TabLabel>ZIP</TabLabel>
+						<TabName>ZIP</TabName>
+						<TabValue />
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>243</XPosition>
+						<YPosition>56</YPosition>
+						<TabLabel>VERSION_NUM</TabLabel>
+						<TabName>VERSION_NUM</TabName>
+						<TabValue />
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>395</XPosition>
+						<YPosition>1402</YPosition>
+						<TabLabel>LICENSE_NUMBER</TabLabel>
+						<TabName>LICENSE_NUMBER</TabName>
+						<TabValue />
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<ValidationPattern>^[a-zA-Z0-9]{7}$</ValidationPattern>
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>658</XPosition>
+						<YPosition>1116</YPosition>
+						<TabLabel>Date Signed</TabLabel>
+						<TabName>Date Signed</TabName>
+						<TabValue>7/15/2020</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>589</XPosition>
+						<YPosition>1291</YPosition>
+						<TabLabel>Date Signed</TabLabel>
+						<TabName>Date Signed</TabName>
+						<TabValue>7/15/2020</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>237</XPosition>
+						<YPosition>1354</YPosition>
+						<TabLabel>Date Signed</TabLabel>
+						<TabName>Date Signed</TabName>
+						<TabValue>7/15/2020</TabValue>
+						<DocumentID>6</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>DateSigned</TabType>
+						<Status>Signed</Status>
+						<XPosition>687</XPosition>
+						<YPosition>1177</YPosition>
+						<TabLabel>Date Signed 340</TabLabel>
+						<TabName>Date Signed</TabName>
+						<TabValue>7/15/2020</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkRhdGEgRmllbGQgMjE4Ij48dmFsdWU+QWdlbnQgTGljZW5zZSBOdW1iZXI8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IiNIUkVGIDEiPjx2YWx1ZT5DT1ZFUkVEIENBTElGT1JOSUEgQUdFTlQgUEFZTUVOVCBQT1JUQUw8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IiNIUkVGIDIiPjx2YWx1ZT5Wb3RlciBSZWdpc3RyYXRpb24gVHJhaW5pbmcgR3VpZGU8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IiNIUkVGIDMiPjx2YWx1ZT5Wb3RlciBSZWdpc3RyYXRpb24gVGFzayBHdWlkZSAtIEluIFBlcnNvbiBBc3Npc3RhbmNlPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSIjSFJFRiA0Ij48dmFsdWU+Vm90ZXIgUmVnaXN0cmF0aW9uIFRhc2sgR3VpZGUgLSBQaG9uZSBBc3Npc3RhbmNlPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJEYXRhIEZpZWxkIDIxOCAyMjAiPjx2YWx1ZT5BZ2VudCBMaWNlbnNlIE51bWJlcjwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iVkVSU0lPTl9OVU0iPjx2YWx1ZT5WZXJzaW9uMTIzPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJQSE9ORSI+PHZhbHVlPjEyMzEyMzEyMzQ8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlNTTiI+PHZhbHVlPjEyMzQ1Njc4OTwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iU1NOXzEiPjx2YWx1ZT4xMjM0NTY3ODk8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlZFUlNJT05fTlVNXzEiPjx2YWx1ZT52ZXJzaW9uIzEyMzwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQUREUkVTU18xIj48dmFsdWU+bWFpbCBhZGRyZTE8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkNJVFkiPjx2YWx1ZT5jaXR5PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJTVEFURSI+PHZhbHVlPlNUPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJaSVAiPjx2YWx1ZT4xMjM0NTwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iVkVSU0lPTl9OVU1fMiI+PHZhbHVlPnZlcnNpb24jMTIzPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJTU05fMiI+PHZhbHVlPjEyMzQ1Njc4OTwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQ0FMSUZPUk5JQV9SRVNJREVOVCI+PHZhbHVlPlg8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkNBTElGT1JOSUFfTk9OUkVTSURFTlQiPjx2YWx1ZT5YPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJOT19TRVJWSUNFU19QRVJGT1JNRUQiPjx2YWx1ZT5YPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGUkFOQ0hJU0VfVEFYX0JPQVJEIj48dmFsdWU+WDwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRW50aXR5IFR5cGUiPjx2YWx1ZT5JbmRpdmlkdWFsIG9yIFNvbGUgUHJvcHJpZXRvcjwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iUEhPTkVfMSI+PHZhbHVlPjEyMzEyMzEyMzQ8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkxJQ19FWFAiPjx2YWx1ZT4xMi8xMi8yMDIxPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJDT05UUkFDVCBOVU1CRVIiPjx2YWx1ZT4xMi1BLTEyMzQ1PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJMSUNFTlNFX05VTUJFUiI+PHZhbHVlPmxpYzEyMzQ8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkNPTlRSQUNUIE5VTUJFUl8xIj48dmFsdWU+MTItQS0xMjM0NTwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iTElDRU5TRV9OVU1CRVJfMSI+PHZhbHVlPmxpYzEyMzQ8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkxJQ0VOU0VfTlVNQkVSXzIiPjx2YWx1ZT5saWMxMjM0PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJMSUNFTlNFX05VTUJFUl8zIj48dmFsdWU+bGljMTIzNDwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRW1haWxBZGRyZXNzIj48dmFsdWU+ZnJhbmtmdHNhaS5jdXN0b21lcitidWxrMUBnbWFpbC5jb208L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkZ1bGxOYW1lIj48dmFsdWU+YnVsayB1c2VyMTwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQlVTSU5FU1NfRkFYIj48dmFsdWU+MTIzMTIzMTIzNDwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQVVUSE9SSVpFRF9USVRMRSI+PHZhbHVlPmF1dGggdGl0bGU8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkFERFJFU1NfMiI+PHZhbHVlPjwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQUREUkVTU18xXzEiPjx2YWx1ZT48L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkFERFJFU1NfMl8xIj48dmFsdWU+PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJDSVRZXzEiPjx2YWx1ZT48L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlNUQVRFXzEiPjx2YWx1ZT48L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlpJUF8xIj48dmFsdWU+PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJWRVJTSU9OX05VTV8zIj48dmFsdWU+PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJMSUNFTlNFX05VTUJFUl80Ij48dmFsdWU+PC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJEYXRlU2lnbmVkIj48dmFsdWU+Ny8xNS8yMDIwPC92YWx1ZT48L2ZpZWxkPjwvZmllbGRzPjwveGZkZj48L0Zvcm1EYXRhPg==</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="Data Field 218">
+								<value>Agent License Number</value>
+							</field>
+							<field name="#HREF 1">
+								<value>COVERED CALIFORNIA AGENT PAYMENT PORTAL</value>
+							</field>
+							<field name="#HREF 2">
+								<value>Voter Registration Training Guide</value>
+							</field>
+							<field name="#HREF 3">
+								<value>Voter Registration Task Guide - In Person Assistance</value>
+							</field>
+							<field name="#HREF 4">
+								<value>Voter Registration Task Guide - Phone Assistance</value>
+							</field>
+							<field name="Data Field 218 220">
+								<value>Agent License Number</value>
+							</field>
+							<field name="VERSION_NUM">
+								<value>Version123</value>
+							</field>
+							<field name="PHONE">
+								<value>1231231234</value>
+							</field>
+							<field name="SSN">
+								<value>123456789</value>
+							</field>
+							<field name="SSN_1">
+								<value>123456789</value>
+							</field>
+							<field name="VERSION_NUM_1">
+								<value>version#123</value>
+							</field>
+							<field name="ADDRESS_1">
+								<value>mail addre1</value>
+							</field>
+							<field name="CITY">
+								<value>city</value>
+							</field>
+							<field name="STATE">
+								<value>ST</value>
+							</field>
+							<field name="ZIP">
+								<value>12345</value>
+							</field>
+							<field name="VERSION_NUM_2">
+								<value>version#123</value>
+							</field>
+							<field name="SSN_2">
+								<value>123456789</value>
+							</field>
+							<field name="CALIFORNIA_RESIDENT">
+								<value>X</value>
+							</field>
+							<field name="CALIFORNIA_NONRESIDENT">
+								<value>X</value>
+							</field>
+							<field name="NO_SERVICES_PERFORMED">
+								<value>X</value>
+							</field>
+							<field name="FRANCHISE_TAX_BOARD">
+								<value>X</value>
+							</field>
+							<field name="Entity Type">
+								<value>Individual or Sole Proprietor</value>
+							</field>
+							<field name="PHONE_1">
+								<value>1231231234</value>
+							</field>
+							<field name="LIC_EXP">
+								<value>12/12/2021</value>
+							</field>
+							<field name="CONTRACT NUMBER">
+								<value>12-A-12345</value>
+							</field>
+							<field name="LICENSE_NUMBER">
+								<value>lic1234</value>
+							</field>
+							<field name="CONTRACT NUMBER_1">
+								<value>12-A-12345</value>
+							</field>
+							<field name="LICENSE_NUMBER_1">
+								<value>lic1234</value>
+							</field>
+							<field name="LICENSE_NUMBER_2">
+								<value>lic1234</value>
+							</field>
+							<field name="LICENSE_NUMBER_3">
+								<value>lic1234</value>
+							</field>
+							<field name="EmailAddress">
+								<value>frankftsai.customer+bulk1@gmail.com</value>
+							</field>
+							<field name="FullName">
+								<value>bulk user1</value>
+							</field>
+							<field name="BUSINESS_FAX">
+								<value>1231231234</value>
+							</field>
+							<field name="AUTHORIZED_TITLE">
+								<value>auth title</value>
+							</field>
+							<field name="ADDRESS_2">
+								<value />
+							</field>
+							<field name="ADDRESS_1_1">
+								<value />
+							</field>
+							<field name="ADDRESS_2_1">
+								<value />
+							</field>
+							<field name="CITY_1">
+								<value />
+							</field>
+							<field name="STATE_1">
+								<value />
+							</field>
+							<field name="ZIP_1">
+								<value />
+							</field>
+							<field name="VERSION_NUM_3">
+								<value />
+							</field>
+							<field name="LICENSE_NUMBER_4">
+								<value />
+							</field>
+							<field name="DateSigned">
+								<value>7/15/2020</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>2ad1f726-f76e-4293-b07d-885e7e818cbd</RecipientId>
+			</RecipientStatus>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>frankftsai.customer+2@gmail.com</Email>
+				<UserName>Frank Tsai</UserName>
+				<RoutingOrder>2</RoutingOrder>
+				<Sent>2020-07-15T11:22:51.25</Sent>
+				<Delivered>2020-07-15T11:25:05.953</Delivered>
+				<Signed>2020-07-15T11:25:32.64</Signed>
+				<DeclineReason xsi:nil="true" />
+				<Status>Completed</Status>
+				<RecipientIPAddress>12.148.184.130</RecipientIPAddress>
+				<CustomFields />
+				<TabStatuses>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>733</XPosition>
+						<YPosition>20</YPosition>
+						<TabLabel>BSB_OK 285</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>BSB</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>BSB</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>431</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>BSB</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>BSB</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>722</XPosition>
+						<YPosition>100</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>BSB</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>BSB</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>739</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>BSB_OK 285 314</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>BSB</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>BSB</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>687</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>681</XPosition>
+						<YPosition>18</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>670</XPosition>
+						<YPosition>100</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>379</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>BSB</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkJTQl9PSyAyODUiPjx2YWx1ZT5CU0I8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkJTQiI+PHZhbHVlPkJTQjwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iQlNCXzEiPjx2YWx1ZT5CU0I8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkJTQl9PSyAyODUgMzE0Ij48dmFsdWU+QlNCPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJCU0JfMiI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJCU0JfMyI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJCU0JfNCI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJCU0JfNSI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjwvZmllbGRzPjwveGZkZj48L0Zvcm1EYXRhPg==</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<EsignAgreementInformation>
+					<AccountEsignId>44071d54-6054-4164-85fa-23aec02060f0</AccountEsignId>
+					<UserEsignId>e0c66f01-1a7e-4129-a5fc-47cda2bf9ae7</UserEsignId>
+					<AgreementDate>2020-07-15T11:25:05.953</AgreementDate>
+				</EsignAgreementInformation>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="BSB_OK 285">
+								<value>BSB</value>
+							</field>
+							<field name="BSB">
+								<value>BSB</value>
+							</field>
+							<field name="BSB_1">
+								<value>BSB</value>
+							</field>
+							<field name="BSB_OK 285 314">
+								<value>BSB</value>
+							</field>
+							<field name="BSB_2">
+								<value>Radio</value>
+							</field>
+							<field name="BSB_3">
+								<value>Radio</value>
+							</field>
+							<field name="BSB_4">
+								<value>Radio</value>
+							</field>
+							<field name="BSB_5">
+								<value>Radio</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>68ce6b8e-bb3a-46dd-87d6-44b435794272</RecipientId>
+			</RecipientStatus>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>frankftsai.customer+3@gmail.com</Email>
+				<UserName>Frank Tsai</UserName>
+				<RoutingOrder>3</RoutingOrder>
+				<Sent>2020-07-15T11:25:43.687</Sent>
+				<Delivered>2020-07-15T11:26:01.92</Delivered>
+				<Signed>2020-07-15T11:26:15.563</Signed>
+				<DeclineReason xsi:nil="true" />
+				<Status>Completed</Status>
+				<RecipientIPAddress>12.148.184.130</RecipientIPAddress>
+				<CustomFields />
+				<TabStatuses>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>895</XPosition>
+						<YPosition>20</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>587</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>889</XPosition>
+						<YPosition>100</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>900</XPosition>
+						<YPosition>27</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>850</XPosition>
+						<YPosition>25</YPosition>
+						<TabLabel>FMD Rev</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>835</XPosition>
+						<YPosition>14</YPosition>
+						<TabLabel>FMD Rev</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>827</XPosition>
+						<YPosition>100</YPosition>
+						<TabLabel>FMD Rev</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>535</XPosition>
+						<YPosition>22</YPosition>
+						<TabLabel>FMD Rev</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkZNRF9PSyI+PHZhbHVlPkZNRDwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRk1EX09LXzEiPjx2YWx1ZT5GTUQ8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkZNRF9PS18yIj48dmFsdWU+Rk1EPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTURfT0tfMyI+PHZhbHVlPkZNRDwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRk1EIFJldiI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTUQgUmV2XzEiPjx2YWx1ZT5SYWRpbzwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRk1EIFJldl8yIj48dmFsdWU+UmFkaW88L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkZNRCBSZXZfMyI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjwvZmllbGRzPjwveGZkZj48L0Zvcm1EYXRhPg==</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="FMD_OK">
+								<value>FMD</value>
+							</field>
+							<field name="FMD_OK_1">
+								<value>FMD</value>
+							</field>
+							<field name="FMD_OK_2">
+								<value>FMD</value>
+							</field>
+							<field name="FMD_OK_3">
+								<value>FMD</value>
+							</field>
+							<field name="FMD Rev">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Rev_1">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Rev_2">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Rev_3">
+								<value>Radio</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>4d6c5c62-5e8e-4d6f-8379-36e288c8d4a7</RecipientId>
+			</RecipientStatus>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>frankftsai.customer+4@gmail.com</Email>
+				<UserName>Frank Tsai</UserName>
+				<RoutingOrder>4</RoutingOrder>
+				<Sent>2020-07-15T11:26:25.39</Sent>
+				<Delivered>2020-07-15T11:26:42.593</Delivered>
+				<Signed>2020-07-15T11:27:01.297</Signed>
+				<DeclineReason xsi:nil="true" />
+				<Status>Completed</Status>
+				<RecipientIPAddress>12.148.184.130</RecipientIPAddress>
+				<CustomFields />
+				<TabStatuses>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>895</XPosition>
+						<YPosition>52</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD Sign</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD Sign</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>589</XPosition>
+						<YPosition>56</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD Sign</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD Sign</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>889</XPosition>
+						<YPosition>131</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD Sign</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD Sign</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>900</XPosition>
+						<YPosition>60</YPosition>
+						<TabLabel>FMD_OK</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>FMD Sign</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>FMD Sign</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>SignHere</TabType>
+						<Status>Signed</Status>
+						<XPosition>102</XPosition>
+						<YPosition>1225</YPosition>
+						<TabLabel>Signature 274</TabLabel>
+						<TabName>Sign Here</TabName>
+						<TabValue />
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>850</XPosition>
+						<YPosition>54</YPosition>
+						<TabLabel>FMD Sign</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>835</XPosition>
+						<YPosition>50</YPosition>
+						<TabLabel>FMD Sign</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>827</XPosition>
+						<YPosition>127</YPosition>
+						<TabLabel>FMD Sign</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>535</XPosition>
+						<YPosition>54</YPosition>
+						<TabLabel>FMD Sign</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IkZNRF9PSyI+PHZhbHVlPkZNRCBTaWduPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTURfT0tfMSI+PHZhbHVlPkZNRCBTaWduPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTURfT0tfMiI+PHZhbHVlPkZNRCBTaWduPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTURfT0tfMyI+PHZhbHVlPkZNRCBTaWduPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTUQgU2lnbiI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJGTUQgU2lnbl8xIj48dmFsdWU+UmFkaW88L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IkZNRCBTaWduXzIiPjx2YWx1ZT5SYWRpbzwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iRk1EIFNpZ25fMyI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjwvZmllbGRzPjwveGZkZj48L0Zvcm1EYXRhPg==</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="FMD_OK">
+								<value>FMD Sign</value>
+							</field>
+							<field name="FMD_OK_1">
+								<value>FMD Sign</value>
+							</field>
+							<field name="FMD_OK_2">
+								<value>FMD Sign</value>
+							</field>
+							<field name="FMD_OK_3">
+								<value>FMD Sign</value>
+							</field>
+							<field name="FMD Sign">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Sign_1">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Sign_2">
+								<value>Radio</value>
+							</field>
+							<field name="FMD Sign_3">
+								<value>Radio</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>8e0dcb8e-a0b5-4f95-b7ed-6239880257fa</RecipientId>
+			</RecipientStatus>
+			<RecipientStatus>
+				<Type>Signer</Type>
+				<Email>frankftsai.customer+5@gmail.com</Email>
+				<UserName>Frank Tsai</UserName>
+				<RoutingOrder>5</RoutingOrder>
+				<Sent>2020-07-15T11:27:10.39</Sent>
+				<Delivered>2020-07-15T11:27:22.733</Delivered>
+				<Signed>2020-07-15T11:27:40.127</Signed>
+				<DeclineReason xsi:nil="true" />
+				<Status>Completed</Status>
+				<RecipientIPAddress>12.148.184.130</RecipientIPAddress>
+				<CustomFields />
+				<TabStatuses>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>733</XPosition>
+						<YPosition>54</YPosition>
+						<TabLabel>Text caf6bd30-cb03-437b-bee9-75110663698b</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>SALES</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>SALES</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>431</XPosition>
+						<YPosition>56</YPosition>
+						<TabLabel>Text 83f87539-ad0e-4324-980d-c9fda925e51f</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>SALES</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>SALES</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>725</XPosition>
+						<YPosition>131</YPosition>
+						<TabLabel>Text 31e3bf77-bc3a-4c75-bd37-97c48763039f</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>SALES</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>SALES</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>739</XPosition>
+						<YPosition>60</YPosition>
+						<TabLabel>Text 1c7b20d3-8f7b-4126-9c70-9ec9ccef0f58</TabLabel>
+						<TabName>Text</TabName>
+						<TabValue>SALES</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue>SALES</OriginalValue>
+						<ValidationPattern />
+						<CustomTabType>Text</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>687</XPosition>
+						<YPosition>60</YPosition>
+						<TabLabel>Radio Group 230ef61f-6102-4739-a4ae-8ff786c7c28f</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>2</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>681</XPosition>
+						<YPosition>54</YPosition>
+						<TabLabel>Radio Group 32d88a6d-8e28-4d68-81d2-73de08e3d7be</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>3</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>672</XPosition>
+						<YPosition>131</YPosition>
+						<TabLabel>Radio Group 27b412d9-80bf-4d93-8cc7-792bdc2ed213</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>4</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+					<TabStatus>
+						<TabType>Custom</TabType>
+						<Status>Signed</Status>
+						<XPosition>379</XPosition>
+						<YPosition>56</YPosition>
+						<TabLabel>Radio Group 9fd08bcf-8ce4-4ea7-a963-f4c5223c14a0</TabLabel>
+						<TabName>Radio</TabName>
+						<TabValue>X</TabValue>
+						<DocumentID>5</DocumentID>
+						<PageNumber>1</PageNumber>
+						<OriginalValue />
+						<CustomTabType>Radio</CustomTabType>
+					</TabStatus>
+				</TabStatuses>
+				<RecipientAttachment>
+					<Attachment>
+						<Data>PEZvcm1EYXRhPjx4ZmRmPjxmaWVsZHM+PGZpZWxkIG5hbWU9IlRleHQgY2FmNmJkMzAtY2IwMy00MzdiLWJlZTktNzUxMTA2NjM2OThiIj48dmFsdWU+U0FMRVM8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlRleHQgODNmODc1MzktYWQwZS00MzI0LTk4MGQtYzlmZGE5MjVlNTFmIj48dmFsdWU+U0FMRVM8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlRleHQgMzFlM2JmNzctYmMzYS00Yzc1LWJkMzctOTdjNDg3NjMwMzlmIj48dmFsdWU+U0FMRVM8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlRleHQgMWM3YjIwZDMtOGY3Yi00MTI2LTljNzAtOWVjOWNjZWYwZjU4Ij48dmFsdWU+U0FMRVM8L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlJhZGlvIEdyb3VwIDIzMGVmNjFmLTYxMDItNDczOS1hNGFlLThmZjc4NmM3YzI4ZiI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjxmaWVsZCBuYW1lPSJSYWRpbyBHcm91cCAzMmQ4OGE2ZC04ZTI4LTRkNjgtODFkMi03M2RlMDhlM2Q3YmUiPjx2YWx1ZT5SYWRpbzwvdmFsdWU+PC9maWVsZD48ZmllbGQgbmFtZT0iUmFkaW8gR3JvdXAgMjdiNDEyZDktODBiZi00ZDkzLThjYzctNzkyYmRjMmVkMjEzIj48dmFsdWU+UmFkaW88L3ZhbHVlPjwvZmllbGQ+PGZpZWxkIG5hbWU9IlJhZGlvIEdyb3VwIDlmZDA4YmNmLThjZTQtNGVhNy1hOTYzLWY0YzUyMjNjMTRhMCI+PHZhbHVlPlJhZGlvPC92YWx1ZT48L2ZpZWxkPjwvZmllbGRzPjwveGZkZj48L0Zvcm1EYXRhPg==</Data>
+						<Label>DSXForm</Label>
+					</Attachment>
+				</RecipientAttachment>
+				<AccountStatus>Active</AccountStatus>
+				<FormData>
+					<xfdf>
+						<fields>
+							<field name="Text caf6bd30-cb03-437b-bee9-75110663698b">
+								<value>SALES</value>
+							</field>
+							<field name="Text 83f87539-ad0e-4324-980d-c9fda925e51f">
+								<value>SALES</value>
+							</field>
+							<field name="Text 31e3bf77-bc3a-4c75-bd37-97c48763039f">
+								<value>SALES</value>
+							</field>
+							<field name="Text 1c7b20d3-8f7b-4126-9c70-9ec9ccef0f58">
+								<value>SALES</value>
+							</field>
+							<field name="Radio Group 230ef61f-6102-4739-a4ae-8ff786c7c28f">
+								<value>Radio</value>
+							</field>
+							<field name="Radio Group 32d88a6d-8e28-4d68-81d2-73de08e3d7be">
+								<value>Radio</value>
+							</field>
+							<field name="Radio Group 27b412d9-80bf-4d93-8cc7-792bdc2ed213">
+								<value>Radio</value>
+							</field>
+							<field name="Radio Group 9fd08bcf-8ce4-4ea7-a963-f4c5223c14a0">
+								<value>Radio</value>
+							</field>
+						</fields>
+					</xfdf>
+				</FormData>
+				<RecipientId>9fd84a2c-338f-4b07-91c1-f1ade1f513ea</RecipientId>
+			</RecipientStatus>
+		</RecipientStatuses>
+		<TimeGenerated>2020-07-15T11:28:14.4869755</TimeGenerated>
+		<EnvelopeID>412b8d31-6d58-4e7c-9cfe-20e0b021cd00</EnvelopeID>
+		<Subject>Covered California NEW AGENCY AGREEMENT 17-A INDIV_AA-NEW AGENT TEST1</Subject>
+		<UserName>Frank Tsai</UserName>
+		<Email>Frankftsai.customer+covca@gmail.com</Email>
+		<Status>Completed</Status>
+		<Created>2020-07-15T11:21:21.383</Created>
+		<Sent>2020-07-15T11:27:10.547</Sent>
+		<Delivered>2020-07-15T11:27:23</Delivered>
+		<Signed>2020-07-15T11:27:40.127</Signed>
+		<Completed>2020-07-15T11:27:40.127</Completed>
+		<ACStatus>Original</ACStatus>
+		<ACStatusDate>2020-07-15T11:21:21.383</ACStatusDate>
+		<ACHolder>Frank Tsai</ACHolder>
+		<ACHolderEmail>Frankftsai.customer+covca@gmail.com</ACHolderEmail>
+		<ACHolderLocation>DocuSign</ACHolderLocation>
+		<SigningLocation>Online</SigningLocation>
+		<SenderIPAddress>12.148.184.130 </SenderIPAddress>
+		<EnvelopePDFHash />
+		<CustomFields>
+			<CustomField>
+				<Name>templateUsageRestriction</Name>
+				<Show>False</Show>
+				<Required>False</Required>
+				<Value>allOptions</Value>
+			</CustomField>
+			<CustomField>
+				<Name>BulkBatchId</Name>
+				<Show>False</Show>
+				<Required>False</Required>
+				<Value>a2e3f6f1-a980-438b-b633-d1077bea6b6a</Value>
+			</CustomField>
+			<CustomField>
+				<Name>AccountId</Name>
+				<Show>false</Show>
+				<Required>false</Required>
+				<Value>9510199</Value>
+				<CustomFieldType>Text</CustomFieldType>
+			</CustomField>
+			<CustomField>
+				<Name>AccountName</Name>
+				<Show>false</Show>
+				<Required>false</Required>
+				<Value>Covered California (DevEnvironment) </Value>
+				<CustomFieldType>Text</CustomFieldType>
+			</CustomField>
+			<CustomField>
+				<Name>AccountSite</Name>
+				<Show>false</Show>
+				<Required>false</Required>
+				<Value>demo</Value>
+				<CustomFieldType>Text</CustomFieldType>
+			</CustomField>
+		</CustomFields>
+		<AutoNavigation>true</AutoNavigation>
+		<EnvelopeIdStamping>true</EnvelopeIdStamping>
+		<AuthoritativeCopy>false</AuthoritativeCopy>
+		<DocumentStatuses>
+			<DocumentStatus>
+				<ID>1</ID>
+				<Name>New Individual Agent_Checklist for Agency Agreement.pdf</Name>
+				<TemplateName>Updated 17-A_NEW_AGENT_INDIV</TemplateName>
+				<Sequence>1</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>2</ID>
+				<Name>STD.204.pdf</Name>
+				<TemplateName />
+				<Sequence>2</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>3</ID>
+				<Name>STD 213 2017MA</Name>
+				<TemplateName />
+				<Sequence>3</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>4</ID>
+				<Name>Agency_Agreement_Monetary_Agreement_Updated_May 2020.pdf</Name>
+				<TemplateName />
+				<Sequence>4</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>5</ID>
+				<Name>STD 215 Final</Name>
+				<TemplateName />
+				<Sequence>5</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>6</ID>
+				<Name>VR_Training_Acknowledgement_Updated_03.2020.pdf</Name>
+				<TemplateName />
+				<Sequence>6</Sequence>
+			</DocumentStatus>
+			<DocumentStatus>
+				<ID>7</ID>
+				<Name>Screen Shot 2020-07-07 at 11.42.09 AM.pdf</Name>
+				<TemplateName />
+				<Sequence>7</Sequence>
+			</DocumentStatus>
+		</DocumentStatuses>
+	</EnvelopeStatus>
+	<TimeZone>Pacific Standard Time</TimeZone>
+	<TimeZoneOffset>-7</TimeZoneOffset>
+</DocuSignEnvelopeInformation>

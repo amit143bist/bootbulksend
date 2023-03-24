@@ -1,0 +1,73 @@
+spring:
+  application:
+    name: dszuulproxy
+  profiles:
+    active: dev
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+
+hystrix:
+  threadpool:
+    coreSize: 400
+    maximumSize: 2000
+    default:
+      coreSize: 400
+      maximumSize: 2000
+      maxQueueSize: 20000
+      queueSizeRejectionThreshold: 10000
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+      circuitBreaker:
+        sleepWindowInMillisec‌​onds: 20000
+zuul:
+    ribbon:
+        eager-load:
+            enabled: true
+    semaphore:
+      max-semaphores: 2000
+    ribbonIsolationStrategy: THREAD
+    routes:
+        dsconnectlistener:
+          sensitiveHeaders: 
+          path: /connect/**
+          serviceId: dsconnectlistener
+          stripPrefix: false
+          MaxTotalHttpConnections: 1600
+          MaxConnectionsPerHost: 800
+
+ribbon:
+    ReadTimeout: 30000
+    ConnectTimeout: 30000
+    IsSecure: false
+    MaxTotalHttpConnections: 2000
+    MaxConnectionsPerHost: 400
+    MaxAutoRetries: 2
+    MaxAutoRetriesNextServer: 2
+ 
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

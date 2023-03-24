@@ -1,0 +1,175 @@
+{
+  "applicationId": "2222",
+  "applicationType": "tenant",
+  "recipients": [
+    {
+      "fullName": "Landlord Name",
+      "email": "barpe061+landlord@gmail.com",
+      "roleName": "tenant",
+      "languagePreference": "EN",
+      "items": [
+        {
+          "dataLabel": "FirstName",
+          "dataValue": "Pablito"
+        },
+        {
+          "dataLabel": "FinancialHardship",
+          "dataValue": "FinancialHardshipFinancialHardship"
+        },
+        {
+          "dataLabel": "GovermentIssuedID",
+          "dataValue": "1234567890187654323"
+        },
+        {
+          "dataLabel": "FederalHousingSubsidy",
+          "dataValue": "FederalHousingSubsidyFederalHousingSubsidy"
+        },
+        {
+          "dataLabel": "Aid2020Received",
+          "dataValue": "Aid2020ReceivedAid2020ReceivedAid2020Received"
+        },
+        {
+          "dataLabel": "RentDueBehind",
+          "dataValue": "RentDueBehindRentDueBehindRentDueBehind"
+        },
+        {
+          "dataLabel": "Next90DaysRentHelpNeeded",
+          "dataValue": "Next90DaysRentHelpNeededNext90DaysRentHelpNeededNext90DaysRentHelpNeeded"
+        },
+        {
+          "dataLabel": "OtherProgramsAssistance",
+          "dataValue": "OtherProgramsAssistanceOtherProgramsAssistanceOtherProgramsAssistance"
+        },
+        {
+          "dataLabel": "PeopleInHousehold",
+          "dataValue": "100"
+        },
+        {
+          "dataLabel": "WageEarner1Name",
+          "dataValue": "WageEarner1Name"
+        },
+        {
+          "dataLabel": "WageEarner1Income2020",
+          "dataValue": "WageEarner1Income2020"
+        },
+        {
+          "dataLabel": "WageEarner2Name",
+          "dataValue": "WageEarner2Name"
+        },
+        {
+          "dataLabel": "WageEarner2Income2020",
+          "dataValue": "WageEarner2Income2020"
+        },
+        {
+          "dataLabel": "WageEarner3Name",
+          "dataValue": "WageEarner3Name"
+        },
+        {
+          "dataLabel": "WageEarner3Income2020",
+          "dataValue": "WageEarner3Income2020"
+        },
+        {
+          "dataLabel": "WageEarner4Name",
+          "dataValue": "WageEarner4Name"
+        },
+        {
+          "dataLabel": "WageEarner4Income2020",
+          "dataValue": "WageEarner4Income2020"
+        },
+        {
+          "dataLabel": "WageEarner5Name",
+          "dataValue": "WageEarner5Name"
+        },
+        {
+          "dataLabel": "WageEarner5Income2020",
+          "dataValue": "WageEarner5Income2020 "
+        },
+        {
+          "dataLabel": "TotalHouseholdIncome2020",
+          "dataValue": "TotalHouseholdIncome2020"
+        },
+
+        {
+          "dataLabel": "IsAccepted",
+          "dataValue": "0"
+        },
+        {
+          "dataLabel": "AddressLine1",
+          "dataValue": "AddressLine1"
+        },
+        {
+          "dataLabel": "AddressLine2",
+          "dataValue": "AddressLine2"
+        },
+        {
+          "dataLabel": "AddressLine3",
+          "dataValue": "AddressLine3"
+        },
+        {
+          "dataLabel": "City",
+          "dataValue": "City"
+        },
+        {
+          "dataLabel": "State",
+          "dataValue": "NS"
+        },
+        {
+          "dataLabel": "Zip",
+          "dataValue": "11111-1111"
+        },
+        {
+          "dataLabel": "StandardizedAddressLine1",
+          "dataValue": "StandardizedAddressLine1"
+        },
+        {
+          "dataLabel": "StandardizedAddressLine2",
+          "dataValue": "StandardizedAddressLine2"
+        },
+        {
+          "dataLabel": "StandardizedAddressLine3",
+          "dataValue": "StandardizedAddressLine3"
+        },
+        {
+          "dataLabel": "StandardizedCity",
+          "dataValue": "StandardizedCity"
+        },
+        {
+          "dataLabel": "StandardizedState",
+          "dataValue": "ST"
+        },
+        {
+          "dataLabel": "StandardizedZip",
+          "dataValue": "22222-2222"
+        },
+        {
+          "dataLabel": "CommunityPartnerCode",
+          "dataValue": "11111"
+        },
+        {
+          "dataLabel": "CommunityPartnerName",
+          "dataValue": "communitypartnername"
+        },
+        {
+          "dataLabel": "FullTenantName",
+          "dataValue": "Tenant Name"
+        }
+      ]
+    },
+    {
+      "fullName": "Tenant Name",
+      "email": "barpe061+tenant@gmail.com",
+      "roleName": "landlord",
+      "languagePreference": "ES",
+      "items": [
+        {
+          "dataLabel": "Name",
+          "dataValue": "Tenant Name"
+        },
+        {
+          "dataLabel": "FullTenantName",
+          "dataValue": "Tenant Name"
+        }
+      ]
+    }
+  ]
+}

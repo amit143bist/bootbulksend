@@ -1,0 +1,91 @@
+spring:
+  application:
+    name: dscoredata
+  profiles:
+     active: dev
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=ihdadb
+    username: sa
+    password: DocuSign1!
+    hikari:
+      maximum-pool-size: 10
+      connectionTimeout: 60000
+      idleTimeout: 600000
+      maxLifetime: 3600000
+    
+server:
+  port: 0
+ 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+spring.jpa.properties.hibernate.jdbc.batch_size: 20
+spring.jpa.properties.hibernate.order_inserts: true
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation: true
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
+spring.jpa.hibernate.cache.use_second_level_cache: true
+spring.jpa.hibernate.cache.use_query_cache: true
+spring.jpa.hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+logging.level.org.hibernate.SQL: DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+proserv:
+  application:
+    username: docusignuser
+    password: e8af9d31dfa0fcc6ba0128c3bbb858285a4d5f46f82deb81a8b292f2004cccdaeadab861e3381ac5
+    hazelcast:
+      lockduration: 2000
+  dsappdata:
+    username: docusignuser
+    password: testing1
+  dsauthentication:
+    username: docusignuser
+    password: testing1
+  dscachedata:
+    username: docusignuser
+    password: testing1
+  dscoredata:
+    username: docusignuser
+    password: testing1
+  dsenvelopedata:
+    username: docusignuser
+    password: testing1  
+  dsreportdata:
+    username: docusignuser
+    password: testing1  
+
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+            
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

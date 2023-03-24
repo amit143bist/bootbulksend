@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ds-proserv-bulksendmonitor-batch</artifactId>
+	<name>ds-proserv-bulksendmonitor-batch</name>
+	<description>Project for BulkSend Envelope Log consumer</description>
+
+	<parent>
+		<groupId>com.ds.proserv.cloud</groupId>
+		<artifactId>ds-proserv-cloud</artifactId>
+		<version>1.0-GUITAR</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-batch-common</artifactId>
+			<version>${proserv-cloud.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ds.proserv.cloud</groupId>
+			<artifactId>ds-proserv-dsapi-common</artifactId>
+			<version>${proserv-cloud.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.ds.proserv.cloud</groupId>
+            		<artifactId>ds-proserv-cache-common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${springfox-swagger2.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+			        <layers>
+			            <enabled>true</enabled>
+			        </layers>	        
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

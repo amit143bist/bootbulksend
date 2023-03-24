@@ -1,0 +1,47 @@
+{
+	"compositeTemplates": [
+		{
+			"inlineTemplates": [
+				{
+					"recipients": {
+						"signers": [
+							{
+								"recipientId": 1,
+								"roleName": "landlord",
+								"name": "Multi Bulk Recipient::landlord",
+								"email": "multiBulkRecipients-landlord@docusign.com"
+							},
+							{
+								"recipientId": 2,
+								"roleName": "reviewer",
+								"clientUserId": "12345",
+								"name": "Multi Bulk Recipient::reviewer",
+								"email": "multiBulkRecipients-reviewer@docusign.com"
+							}
+						]
+					},
+					"sequence": 2,
+					"customFields": {
+						"textCustomFields": [
+							{
+								"name": "batchName",
+								"value": ""
+							},
+							{
+								"name": "ApplicationId",
+								"value": ""
+							}
+						]
+					}
+				}
+			],
+			"serverTemplates": [
+				{
+					"templateId": "6e9c0f64-2c81-46f6-a8e9-9cabe33a68ef",
+					"sequence": 1
+				}
+			]
+		}
+	],
+	"status": "created"
+}

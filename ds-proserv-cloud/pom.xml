@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ds.proserv.cloud</groupId>
+	<artifactId>ds-proserv-cloud</artifactId>
+	<version>1.0-GUITAR</version>
+	<name>ds-proserv-cloud</name>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.2.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring.shell.version>2.0.1.RELEASE</spring.shell.version>
+		<proserv-cloud.version>1.0-GUITAR</proserv-cloud.version>
+		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+		<auth0-jwt.version>3.8.2</auth0-jwt.version>
+		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+		<jsoup.version>1.12.1</jsoup.version>
+		<spring-boot-admin.version>2.2.3</spring-boot-admin.version>
+		<netflix-zuul.version>2.2.4.RELEASE</netflix-zuul.version>
+		<spring.thymeleaf.version>2.3.2.RELEASE</spring.thymeleaf.version>
+		<apache.opencvs.version>5.2</apache.opencvs.version>
+		<apache.commons.math3>3.5</apache.commons.math3>
+		<super-csv.version>2.4.0</super-csv.version>
+		<google-api-services-gmail.version>v1-rev20210301-1.31.0</google-api-services-gmail.version>
+		<javax.mail.version>1.6.0</javax.mail.version>
+	</properties>
+
+	<modules>
+		<module>ds-proserv-common</module>
+		<module>ds-proserv-feignservice</module>
+		<module>ds-proserv-security-config</module>
+		<module>ds-proserv-connect-common</module>
+		<module>ds-proserv-cache-common</module>
+		<module>ds-proserv-commondata</module>
+		<module>ds-proserv-config-server</module>
+		<module>ds-proserv-eureka-server</module>
+		<module>ds-proserv-coredata</module>
+		<module>ds-proserv-authentication</module>
+		<module>ds-proserv-zuul-proxy</module>
+		<module>ds-proserv-boot-admin</module>
+		<module>ds-proserv-connect-listener</module>
+		<module>ds-proserv-envelopedata</module>
+		<module>ds-proserv-appdata</module>
+		<module>ds-proserv-exception-batch</module>
+		<module>ds-proserv-bulksend-batch</module>
+		<module>ds-proserv-cachedata</module>
+		<module>ds-proserv-report-common</module>
+		<module>ds-proserv-report-data</module>
+		<module>ds-proserv-broker-config</module>
+		<module>ds-proserv-processstart-consumer</module>
+		<module>ds-proserv-processcomplete-consumer</module>
+		<module>ds-proserv-processfailure-consumer</module>
+		<module>ds-proserv-cache-consumer</module>
+		<module>ds-proserv-report-consumer</module>
+		<module>ds-proserv-reportcomplete-consumer</module>
+		<module>ds-proserv-docdownload-consumer</module>
+		<module>ds-proserv-shell</module>
+		<module>ds-proserv-report-shell</module>
+		<module>ds-proserv-envelopeapi</module>
+		<module>ds-proserv-dsapi-common</module>
+		<module>ds-proserv-batch-common</module>
+		<module>ds-proserv-bulksend-consumer</module>
+		<module>ds-proserv-bulksenddata</module>
+		<module>ds-proserv-bulksendenvelopelog-consumer</module>
+		<module>ds-proserv-bulksendmonitor-batch</module>
+		<module>ds-proserv-connect-consumer</module>
+		<module>ds-proserv-docmigration-consumer</module>
+		<module>ds-proserv-envelopeapi-consumer</module>
+		<module>ds-proserv-exception-consumer</module>
+		<module>ds-proserv-amqp-common</module>
+		<module>ds-proserv-applicationenvelope-consumer</module>
+		<module>ds-proserv-bulksend-sourcedata</module>
+		<module>ds-proserv-bulksend-common</module>
+		<module>ds-proserv-envelopeupdateapi-consumer</module>
+		<module>ds-proserv-send-common</module>
+		<module>ds-proserv-bulksend-processfailure-consumer</module>
+		<module>ds-proserv-bulksend-recordlog-consumer</module>
+		<module>ds-proserv-notificationdata</module>
+		<module>ds-proserv-email-common</module>
+		<module>ds-proserv-notification-batch</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+			        <layers>
+			            <enabled>true</enabled>
+			        </layers>	        
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

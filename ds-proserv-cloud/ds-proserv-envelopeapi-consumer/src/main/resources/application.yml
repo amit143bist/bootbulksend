@@ -1,0 +1,88 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        default-requeue-rejected: false
+  application:
+    name: dsenvelopeapiconsumer
+  profiles:
+    active: dev
+      
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8190/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+            
+proserv:
+  queue: 
+    name: CORE_ENVELOPEAPI_PROCESS_QUEUE
+    ttl: 2000
+  exchange:
+    name: MIGRATION_EXCHANGE
+  routing:
+    key: CORE_ENVELOPEAPI_PROCESS_QUEUE
+  
+send:
+  landlord:
+    template: 3889604b-1fbc-4996-8fa8-22743c6001b4
+    headers: landlord::communitypartnercode,landlord::communitypartnername,landlord::languagepreference,tenant::languagepreference,landlord::lemail,landlord::lfullname,tenant::tfirstname,tenant::tmiddlename,tenant::tlastname,tenant::tsuffix,landlord::temail,landlord::tfullname,landlord::isstandardized,landlord::taddrline1,landlord::taddrline2,landlord::taddrline3,landlord::taddrcity,landlord::taddrstate,landlord::taddrzipcode,landlord::taddrcounty,landlord::tsaddrline1,landlord::tsaddrline2,landlord::tsaddrline3,landlord::tsaddrcity,landlord::tsaddrstate,landlord::tsaddrzipcode,landlord::tsaddrcounty,landlord::laid2020received,landlord::tenantneedera,landlord::monthlyrentamount,landlord::totalmonthspastdue,landlord::totalrentpastdue,landlord::may2021pastdue,landlord::jun2021pastdue,landlord::jul2021pastdue,landlord::dec2020pastdue,landlord::nov2020pastdue,landlord::jan2021pastdue,landlord::feb2021pastdue,landlord::mar2021pastdue,landlord::apr2021pastdue,landlord::jun2020pastdue,landlord::may2020pastdue,landlord::jul2020pastdue,landlord::aug2020pastdue,landlord::sep2020pastdue,landlord::oct2020pastdue,landlord::jun2021pastdue,landlord::totalrentpastdue,landlord::totalprospectiverent,landlord::totalrppgrant
+  tenant:
+    template: 3889604b-1fbc-4996-8fa8-22743c6001b4
+    headers: landlord::communitypartnercode,landlord::communitypartnername,landlord::languagepreference,tenant::languagepreference,landlord::lemail,landlord::lfullname,tenant::tfirstname,tenant::tmiddlename,tenant::tlastname,tenant::tsuffix,landlord::temail,landlord::tfullname,landlord::isstandardized,landlord::taddrline1,landlord::taddrline2,landlord::taddrline3,landlord::taddrcity,landlord::taddrstate,landlord::taddrzipcode,landlord::taddrcounty,landlord::tsaddrline1,landlord::tsaddrline2,landlord::tsaddrline3,landlord::tsaddrcity,landlord::tsaddrstate,landlord::tsaddrzipcode,landlord::tsaddrcounty,landlord::laid2020received,landlord::tenantneedera,landlord::monthlyrentamount,landlord::totalmonthspastdue,landlord::totalrentpastdue,landlord::may2021pastdue,landlord::jun2021pastdue,landlord::jul2021pastdue,landlord::dec2020pastdue,landlord::nov2020pastdue,landlord::jan2021pastdue,landlord::feb2021pastdue,landlord::mar2021pastdue,landlord::apr2021pastdue,landlord::jun2020pastdue,landlord::may2020pastdue,landlord::jul2020pastdue,landlord::aug2020pastdue,landlord::sep2020pastdue,landlord::oct2020pastdue,landlord::jun2021pastdue,landlord::totalrentpastdue,landlord::totalprospectiverent,landlord::totalrppgrant
+
+app:
+  authorization:
+    userId: eddc8f7b-da28-4e27-ba0c-7a15fb3ab914
+    scopes: signature impersonation
+    accountguid: 80920da7-e7cc-48d7-a461-68c102dc8dc8
+    userinfoendpoint: https://account-d.docusign.com/oauth/userinfo
+  apiThresholdLimitPercent: 20
+
+ds:
+  propertycache:
+    cacheexpirationseconds: 1800
+  cachenames: \"token\", \"baseUrl\", \"propertyCache\"
+         
+dsauthentication:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000   
+    
+dscachedata:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1200
+    ConnectTimeout: 30000
+    ReadTimeout: 30000
+    
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

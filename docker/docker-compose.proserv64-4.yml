@@ -1,0 +1,361 @@
+# Docker Compose YML for proserv64-3
+# connect services
+# updated: 20200401
+# 
+# NOTE: To install place on vm c:\ihda\phase2\docker directory and rename to docker-compose.yml
+#
+version: "3.9"  # optional since v1.27.0
+
+x-services-volume:
+  &services-volume
+  - type: bind
+    source: c:/ihda/phase2/config
+    target: /docker/config
+  
+services:
+  config-server:
+    image: docusignps/ds-proserv-config-server:1.0-GUITAR
+    container_name: config-server
+    ports:
+      - "8090:8090"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms512m -Xmx512m -XX:NewSize=64m -XX:MaxNewSize=64m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=64m -Xss256k -XX:InitialCodeCacheSize=16m -XX:ReservedCodeCacheSize=64m -XX:MaxDirectMemorySize=32m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8090 -Dcloud.config.searchLocations=/docker/config -Dlogging.file.name=/docker/config/logs/config-server1.log -Dlogging.file.max-size=500MB
+    volumes: *services-volume
+
+  eureka-server1:
+    image: docusignps/ds-proserv-eureka-server:1.0-GUITAR
+    container_name: peer1
+    depends_on:
+      - config-server
+    ports:
+      - "8190:8190"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms512m -Xmx512m -XX:NewSize=64m -XX:MaxNewSize=64m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=64m -Xss256k -XX:InitialCodeCacheSize=16m -XX:ReservedCodeCacheSize=64m -XX:MaxDirectMemorySize=32m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8190 -Dspring.profiles.active=peer1 -Dmig.peer1Port=8190 -Dmig.peer2Port=8191 -Dlogging.file.name=/docker/config/logs/eureka-server1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=config-server:8090
+    volumes: *services-volume
+
+  eureka-server2:
+    image: docusignps/ds-proserv-eureka-server:1.0-GUITAR
+    container_name: peer2
+    depends_on:
+      - config-server
+    ports:
+      - "8191:8191"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms512m -Xmx512m -XX:NewSize=64m -XX:MaxNewSize=64m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=64m -Xss256k -XX:InitialCodeCacheSize=16m -XX:ReservedCodeCacheSize=64m -XX:MaxDirectMemorySize=32m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8191 -Dspring.profiles.active=peer2 -Dmig.peer1Port=8190 -Dmig.peer2Port=8191 -Dlogging.file.name=/docker/config/logs/eureka-server2.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=config-server:8090
+    volumes: *services-volume
+
+  boot-admin:
+    image: docusignps/ds-proserv-boot-admin:1.0-GUITAR
+    container_name: boot-admin
+    depends_on:
+      - config-server
+    ports:
+      - "8192:8192"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms512m -Xmx512m -XX:NewSize=64m -XX:MaxNewSize=64m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=64m -Xss256k -XX:InitialCodeCacheSize=16m -XX:ReservedCodeCacheSize=64m -XX:MaxDirectMemorySize=32m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8192 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/boot-admin.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=config-server:8090
+      - WAIT_HOSTS_TIMEOUT=60
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  cachedata1:
+    image: docusignps/ds-proserv-cachedata:1.0-GUITAR
+    container_name: cachedata1
+    depends_on:
+      - eureka-server1
+    ports:
+      - "8290:8290"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8290 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/cachedata1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=eureka-server1:8190
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  cachedata2:
+    image: docusignps/ds-proserv-cachedata:1.0-GUITAR
+    container_name: cachedata2
+    depends_on:
+      - eureka-server1
+    ports:
+      - "8291:8291"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8291 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/cachedata2.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=eureka-server1:8190
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  zuul-proxy:
+    image: docusignps/ds-proserv-zuul-proxy:1.0-GUITAR
+    container_name: zuul-proxy
+    depends_on:
+      - cachedata1
+    ports:
+      - "8193:8193"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8193 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/zuul-proxy.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  connect-listener1:
+    image: docusignps/ds-proserv-connect-listener:1.0-GUITAR
+    container_name: connect-listener1
+    depends_on:
+      - cachedata1
+    ports:
+      - "9890:9890"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=9890 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/connect-listener1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  # connect-listener2:
+    # image: docusignps/ds-proserv-connect-listener:1.0-GUITAR
+    # container_name: connect-listener2
+    # depends_on:
+      # - cachedata1
+    # ports:
+      # - "9891:9891"
+    # environment:
+      # - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=9891 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/connect-listener2.log -Dlogging.file.max-size=500MB
+      # - WAIT_HOSTS=cachedata1:8290
+      # - WAIT_HOSTS_TIMEOUT=240
+      # - WAIT_SLEEP_INTERVAL=30
+    # volumes: *services-volume
+
+  connect-listener2:
+    image: docusignps/ds-proserv-connect-listener:1.0-GUITAR
+    depends_on:
+      - cachedata1
+    scale: 4
+    ports:
+      - "9891"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=9891 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/connect-listener-scale.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  envelopeapi1:
+    image: docusignps/ds-proserv-envelopeapi:1.0-GUITAR
+    container_name: envelopeapi1
+    depends_on:
+      - cachedata1
+    ports:
+      - "10055:10055"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=10055 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/envelopeapi1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  envelopeapi2:
+    image: docusignps/ds-proserv-envelopeapi:1.0-GUITAR
+    container_name: envelopeapi2
+    depends_on:
+      - cachedata1
+    ports:
+      - "10060:10060"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=10060 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/envelopeapi2.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  coredata1:
+    image: docusignps/ds-proserv-coredata:1.0-GUITAR
+    container_name: coredata1
+    depends_on:
+      - cachedata1
+    ports:
+      - "8490:8490"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8490 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/coredata1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  coredata2:
+    image: docusignps/ds-proserv-coredata:1.0-GUITAR
+    container_name: coredata2
+    depends_on:
+      - cachedata1
+    ports:
+      - "8491:8491"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8491 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/coredata2.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  appdata1:
+    image: docusignps/ds-proserv-appdata:1.0-GUITAR
+    container_name: appdata1
+    depends_on:
+      - cachedata1
+    ports:
+      - "9390:9390"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx2048m -XX:+AlwaysPreTouch -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=9390 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/appdata1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  appdata2:
+    image: docusignps/ds-proserv-appdata:1.0-GUITAR
+    scale: 4
+    depends_on:
+      - cachedata1
+    ports:
+      - "9391"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx2048m -XX:+AlwaysPreTouch -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=9391 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/appdata-sacle.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  # envelopedata1:
+    # image: docusignps/ds-proserv-envelopedata:1.0-GUITAR
+    # container_name: envelopedata1
+    # depends_on:
+      # - cachedata1
+    # ports:
+      # - "8890:8890"
+    # environment:
+      # - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8890 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/envelopedata1.log -Dlogging.file.max-size=500MB
+      # - WAIT_HOSTS=cachedata1:8290
+      # - WAIT_HOSTS_TIMEOUT=240
+      # - WAIT_SLEEP_INTERVAL=30
+    # volumes: *services-volume
+
+  # envelopedata2:
+    # image: docusignps/ds-proserv-envelopedata:1.0-GUITAR
+    # container_name: envelopedata2
+    # depends_on:
+      # - cachedata1
+    # ports:
+      # - "8891:8891"
+    # environment:
+      # - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8891 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/envelopedata2.log -Dlogging.file.max-size=500MB
+      # - WAIT_HOSTS=cachedata1:8290
+      # - WAIT_HOSTS_TIMEOUT=240
+      # - WAIT_SLEEP_INTERVAL=30
+    # volumes: *services-volume
+
+  notificationdata1:
+    image: docusignps/ds-proserv-notificationdata:1.0-GUITAR
+    container_name: notificationdata1
+    depends_on:
+      - cachedata1
+    ports:
+      - "11060:11060"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=11060 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/notificationdata1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  notificationdata2:
+    image: docusignps/ds-proserv-notificationdata:1.0-GUITAR
+    container_name: notificationdata2
+    depends_on:
+      - cachedata1
+    ports:
+      - "11070:11070"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=11070 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/notificationdata2.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  notification-batch:
+    image: docusignps/ds-proserv-notification-batch:1.0-GUITAR
+    container_name: notification-batch
+    privileged: true
+    depends_on:
+      - cachedata1
+    ports:
+      - "11065:11065"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms2048m -Xmx2048m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=11065 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/notification-batch.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  bulksenddata1:
+    image: docusignps/ds-proserv-bulksenddata:1.0-GUITAR
+    container_name: bulksenddata1
+    depends_on:
+      - cachedata1
+    ports:
+      - "8790:8790"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8790 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/bulksenddata1.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  bulksenddata2:
+    image: docusignps/ds-proserv-bulksenddata:1.0-GUITAR
+    scale: 4
+    depends_on:
+      - cachedata1
+    ports:
+      - "8791"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=8791 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/bulksenddata-scale.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+    
+  bulksendenvelopelog-consumer:
+    image: docusignps/ds-proserv-bulksendenvelopelog-consumer:1.0-GUITAR
+    container_name: bulksendenvelopelog-consumer
+    depends_on:
+      - cachedata1
+    ports:
+      - "10080:10080"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=10080 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/bulksendenvelopelog-consumer.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+  applicationenvelope-consumer:
+    image: docusignps/ds-proserv-applicationenvelope-consumer:1.0-GUITAR
+    container_name: applicationenvelope-consumer
+    depends_on:
+      - cachedata1
+    ports:
+      - "10090:10090"
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xms1024m -Xmx1024m -XX:NewSize=64m -XX:MaxNewSize=128m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=256m -Xss512k -XX:InitialCodeCacheSize=128m -XX:ReservedCodeCacheSize=256m -XX:MaxDirectMemorySize=256m -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+HeapDumpOnOutOfMemoryError -XX:+UseGCOverheadLimit -XX:HeapDumpPath=/docker/config/logs/dumps -XX:OnOutOfMemoryError="shutdown -r" -Dserver.port=10090 -Dspring.profiles.active=prod -Dmig.peer1-address=peer1:8190 -Dmig.peer2-address=peer2:8191 -Dlogging.file.name=/docker/config/logs/applicationenvelope-consumer.log -Dlogging.file.max-size=500MB
+      - WAIT_HOSTS=cachedata1:8290
+      - WAIT_HOSTS_TIMEOUT=240
+      - WAIT_SLEEP_INTERVAL=30
+    volumes: *services-volume
+
+networks:
+  default:
+    external:
+      name: ihda-net
